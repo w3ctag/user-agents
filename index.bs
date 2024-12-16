@@ -121,7 +121,7 @@ make a credible commitment to a page in order to get that page's services,
 and it's not disloyal to maintain that commitment after getting the services.
 
 
-<section non-normative>
+<section class="non-normative">
 
 # Acknowledgements # {#acknowledgements}
 
