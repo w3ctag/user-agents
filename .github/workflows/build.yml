@@ -1,0 +1,17 @@
+name: build
+on:
+  pull_request: {}
+  push:
+    branches: [main]
+jobs:
+  build:
+    name: Build, Validate and Deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: w3c/spec-prod@v2
+        with:
+          BUILD_FAIL_ON: warning
+          GH_PAGES_BRANCH: gh-pages

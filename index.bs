@@ -1,0 +1,132 @@
+<pre class='metadata'>
+Title: User Agents
+Shortname: user-agents
+Level: none
+Status: NOTE-ED
+Group: tag
+Repository: w3ctag/user-agents
+URL: https://w3ctag.github.io/user-agents
+Editor: Jeffrey Yasskin, w3cid 72192, Google https://google.com, jyasskin@google.com
+Complain About: accidental-2119 yes, missing-example-ids yes, mixed-indents no
+Markup Shorthands: markdown yes, css no
+Assume Explicit For: yes
+Boilerplate: conformance no
+Abstract: Web user agents include both web browsers and other intermediaries
+    between end-users and the web.
+    Each user agent serves its user,
+    not any of the other constituencies.
+    A user agent owes its user various duties,
+    which should be established through collective discussions
+    and embodied in the various standards that user agents implement.
+
+</pre>
+
+# What is a user agent # {#what}
+
+A <dfn lt="user agent|web user agent" export>web user agent</dfn> is
+any software entity that interacts with websites outside the entity itself,
+on behalf of its user,
+including just to display the content of websites.
+In web specifications,
+web user agents are usually referred to as just "[=user agents=]",
+but there are other kinds of user agents in other domains,
+for example "mail user agents" in the context of email.
+A person can use many different user agents in their day-to-day life.
+
+The most common type of web user agent is the web browser,
+including in-app browsers that can follow cross-site links.
+However, search engines, voice-driven assistants, and generative AI systems
+that can present snippets or summaries of websites to their users,
+or help their users interact with websites,
+can also be user agents.
+
+User agent behavior is not completely defined by web standards
+or even by technical specifications in general.
+In particular,
+user agents choose which specifications to implement in order to best serve their users,
+and they implement proprietary user interfaces and other behavior
+around the specifications they do implement.
+
+
+# How the ecosystem works # {#ecosystem}
+
+The structure of the web browser market helps ensure that browsers act as trustworthy agents,
+but it can also give them conflicts of interest.
+There are many browsers available for free,
+which allows users to switch away from a browser that violates their trust.
+Security and privacy researchers also actively investigate browser behavior
+and publicize any unexpected or user-hostile behavior,
+which helps users pick a browser and be confident that it's trustworthy.
+These researchers benefit from the parts of browsers that are open source.
+
+The trustworthiness of the available browsers is further aided
+by a culture of service to end-users among the people who develop browsers.
+However, we can't just assume that culture will sustain itself:
+it's important that browsers which lose that culture also lose in the marketplace,
+fast enough to prevent the culture-loss from spreading.
+
+
+# Duties of user agents # {#duties}
+
+Each user agent serves its user ([[!RFC8890 inline]]),
+not any of the other constituencies.
+A user agent owes its user various duties,
+which should be established through collective discussions
+and embodied in the various standards that user agents implement.
+
+
+## Protection ## {#protection}
+
+[[design-principles#safe-to-browse|It should be safe to visit a web page.]]
+That is, simply visiting a page must not allow
+the page to make permanent changes to the user's computer or environment
+(for example by installing malware),
+and simply visiting should reveal
+as little information as practical about the user to the page,
+to the user's environment,
+and to any other interested actor.
+
+Users can opt into sharing more information with a page they visit,
+for example by entering or auto-filling data into form fields,
+or granting permissions to the page.
+Users can also allow the page to make changes to their environment,
+for example by installing native programs that the page offers.
+Even in these cases,
+user agents should strive to prevent pages from tricking their users
+and should help their users notice
+when they might be giving the page more power than they intended.
+
+
+## Honesty ## {#honesty}
+
+A user agent is responsible to explain to its user what's going on,
+in terms that user is likely to be able to understand.
+These explanations should happen at appropriate times and frequencies,
+so that they actually help the user understand
+instead of interrupting and distracting the user.
+
+
+## Loyalty ## {#loyalty}
+
+A user agent must serve its user's interests
+over its implementer's interests
+and over the interests of any other party.
+
+A user agent can be loyal
+while also collecting payment for its services,
+as long as that payment is fair and was agreed ahead of time.
+
+A user agent can also help its user
+make a credible commitment to a page in order to get that page's services,
+and it's not disloyal to maintain that commitment after getting the services.
+
+
+<section non-normative>
+
+# Acknowledgements # {#acknowledgements}
+
+Thanks to the [[Infra inline]]
+for an earlier definition of User Agents
+and to [[privacy-principles inline]] for the initial version of these duties.
+
+</section>
