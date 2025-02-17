@@ -78,23 +78,24 @@ and embodied in the various standards that user agents implement.
 ## Protection ## {#protection}
 
 [[design-principles#safe-to-browse|It should be safe to visit a web page.]]
-That is, simply visiting a page must not allow
-the page to make permanent changes to the user's computer or environment
-(for example by installing malware),
-and simply visiting should reveal
-as little information as practical about the user to the page,
-to the user's environment,
-and to any other interested actor.
+Specifically, visiting a page must not allow it to make changes to the user's environment,
+such as installing software, accessing hardware,
+or expose sensitive information without consent.
+Additionally, user agents must prevent web pages from tracking users without explicit consent.
+Any data shared should be minimal,
+only as necessary to achieve the user’s goals,
+and consistent with their preferences and safety.
 
-Users can opt into sharing more information with a page they visit,
-for example by entering or auto-filling data into form fields,
-or granting permissions to the page.
-Users can also allow the page to make changes to their environment,
-for example by installing native programs that the page offers.
-Even in these cases,
-user agents should strive to prevent pages from tricking their users
-and should help their users notice
-when they might be giving the page more power than they intended.
+Users control what they share with a page,
+whether by entering data, allowing auto-fill,
+or granting permissions.
+User agents must ensure users don't unknowingly grant excessive control
+and should warn them when a page may perform actions that go beyond the user's intent.
+
+Access to sensitive resources, like local files, should be strictly limited
+and only permitted with explicit user consent.
+Such access should only occur through direct user actions,
+with clear warnings to prevent accidental exposure of sensitive data.
 
 
 ## Honesty ## {#honesty}
