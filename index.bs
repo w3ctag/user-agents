@@ -1,5 +1,5 @@
 <pre class='metadata'>
-Title: User Agents
+Title: Web User Agents
 Shortname: user-agents
 Level: none
 Status: NOTE-ED
@@ -21,7 +21,7 @@ Abstract: Web user agents include both web browsers and other intermediaries
 
 </pre>
 
-# What is a user agent # {#what}
+# What is a web user agent # {#what}
 
 A <dfn lt="user agent|web user agent" export>web user agent</dfn> is
 any software entity that interacts with websites outside the entity itself,
