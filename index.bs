@@ -81,7 +81,7 @@ and embodied in the various standards that user agents implement.
 Specifically, visiting a page must not allow it to make changes to the user's computer or environment,
 such as installing software, accessing hardware,
 or expose sensitive information without clear user intent.
-Additionally, user agents must prevent web pages from tracking individuals unless they have explictly enabled it.
+Additionally, user agents must prevent web pages from tracking individuals unless they have explicitly enabled it.
 Any data shared should be minimal,
 only as necessary to achieve the user’s goals,
 and consistent with their preferences and safety.
