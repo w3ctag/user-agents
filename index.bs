@@ -38,7 +38,7 @@ including in-app browsers that can follow cross-site links.
 However, user agents also include other tools like
 search engines, voice-driven assistants, and generative AI systems
 that present snippets or summaries of website content,
-or assist users in interacting with websites.
+or help users people navigate and interact with websites.
 Command-line tools like curl also qualify as user agents,
 enabling users to retrieve web content without rendering it.
 Web crawlers and automated bots that collect or
