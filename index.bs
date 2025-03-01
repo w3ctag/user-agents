@@ -90,8 +90,8 @@ in alignment with [data minimization](https://www.w3.org/TR/design-principles/#d
 Users can [choose to share more information](https://www.w3.org/TR/privacy-principles/#dfn-opt-in),
 whether by entering data, allowing auto-fill,
 or granting permissions.
-User agents must ensure users don't unknowingly grant excessive control
-and should warn them when a page may perform actions that go beyond the user's intent.
+User agents should prevent pages from tricking their users
+and help them notice when they may give the page more control than intended.
 
 Access to sensitive resources, like local files, should be strictly limited
 and only permitted with explicit user consent.
