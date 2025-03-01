@@ -78,7 +78,7 @@ and embodied in the various standards that user agents implement.
 ## Protection ## {#protection}
 
 [[design-principles#safe-to-browse|It should be safe to visit a web page.]]
-Specifically, visiting a page must not allow it to make changes to the user's environment,
+Specifically, visiting a page must not allow it to make changes to the user's computer or environment,
 such as installing software, accessing hardware,
 or expose sensitive information without consent.
 Additionally, user agents must prevent web pages from tracking users without explicit consent.
