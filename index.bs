@@ -87,7 +87,7 @@ only what is needed to achieve the individual's goals,
 and consistent with their preferences and safety,
 in alignment with [data minimization](https://www.w3.org/TR/design-principles/#data-minimization) principles.
 
-Users control what they share with a page,
+Users can [choose to share more information](https://www.w3.org/TR/privacy-principles/#dfn-opt-in),
 whether by entering data, allowing auto-fill,
 or granting permissions.
 User agents must ensure users don't unknowingly grant excessive control
