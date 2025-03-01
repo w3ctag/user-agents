@@ -82,9 +82,10 @@ Specifically, visiting a page must not allow it to make changes to the user's co
 such as installing software, accessing hardware,
 or expose sensitive information without clear user intent.
 Additionally, user agents must prevent web pages from tracking individuals unless they have explicitly enabled it.
-Any data shared should be minimal,
-only as necessary to achieve the user’s goals,
-and consistent with their preferences and safety.
+Any data shared should be as little information as practical,
+only what is needed to achieve the individual's goals,
+and consistent with their preferences and safety,
+in alignment with [data minimization](https://www.w3.org/TR/design-principles/#data-minimization) principles.
 
 Users control what they share with a page,
 whether by entering data, allowing auto-fill,
