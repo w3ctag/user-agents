@@ -80,7 +80,7 @@ and embodied in the various standards that user agents implement.
 [[design-principles#safe-to-browse|It should be safe to visit a web page.]]
 Specifically, visiting a page must not allow it to make changes to the user's computer or environment,
 such as installing software, accessing hardware,
-or expose sensitive information without consent.
+or expose sensitive information without clear user intent.
 Additionally, user agents must prevent web pages from tracking users without explicit consent.
 Any data shared should be minimal,
 only as necessary to achieve the user’s goals,
