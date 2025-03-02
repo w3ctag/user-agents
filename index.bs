@@ -79,23 +79,25 @@ and embodied in the various standards that user agents implement.
 ## Protection ## {#protection}
 
 [[design-principles#safe-to-browse|It should be safe to visit a web page.]]
-That is, simply visiting a page must not allow
-the page to make permanent changes to the user's computer or environment
-(for example by installing malware),
-and simply visiting should reveal
-as little information as practical about the user to the page,
-to the user's environment,
-and to any other interested actor.
+Specifically, visiting a page must not allow it to make changes to the user's computer or environment,
+such as installing software, accessing hardware,
+or expose sensitive information without clear user intent.
+Additionally, user agents must prevent web pages from tracking individuals unless they have explicitly enabled it.
+Any data shared should be as little information as practical,
+only what is needed to achieve the individual's goals,
+and consistent with their preferences and safety,
+in alignment with [data minimization](https://www.w3.org/TR/design-principles/#data-minimization) principles.
 
-Users can opt into sharing more information with a page they visit,
-for example by entering or auto-filling data into form fields,
-or granting permissions to the page.
-Users can also allow the page to make changes to their environment,
-for example by installing native programs that the page offers.
-Even in these cases,
-user agents should strive to prevent pages from tricking their users
-and should help their users notice
-when they might be giving the page more power than they intended.
+Users can [choose to share more information](https://www.w3.org/TR/privacy-principles/#dfn-opt-in),
+whether by entering data, allowing auto-fill,
+or granting permissions.
+User agents should prevent pages from tricking their users
+and help them notice when they may give the page more control than intended.
+
+Access to the user's local environment, such as local files,
+should be strictly limited and only allowed when the user clearly intends to provide access.
+This should occur through direct user actions,
+with clear warnings to prevent accidental exposure of data.
 
 
 ## Honesty ## {#honesty}
