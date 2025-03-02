@@ -93,10 +93,10 @@ or granting permissions.
 User agents should prevent pages from tricking their users
 and help them notice when they may give the page more control than intended.
 
-Access to sensitive resources, like local files, should be strictly limited
-and only permitted with explicit user consent.
-Such access should only occur through direct user actions,
-with clear warnings to prevent accidental exposure of sensitive data.
+Access to the user's local environment, such as local files,
+should be strictly limited and only allowed when the user clearly intends to provide access.
+This should occur through direct user actions,
+with clear warnings to prevent accidental exposure of data.
 
 
 ## Honesty ## {#honesty}
