@@ -39,10 +39,6 @@ However, user agents also include other tools like
 search engines, voice-driven assistants, and generative AI systems
 that present snippets or summaries of website content,
 or help users people navigate and interact with websites.
-Command-line tools like curl also qualify as user agents,
-enabling users to retrieve web content without rendering it.
-Web crawlers and automated bots that collect or
-analyze data from websites function as user agents too.
 
 User agent behavior is not completely defined by web standards
 or even by technical specifications in general.
