@@ -1,6 +1,6 @@
 <pre class='metadata'>
 Title: Web User Agents
-Shortname: user-agents
+Shortname: web-user-agents
 Level: none
 Status: NOTE-ED
 Group: tag
