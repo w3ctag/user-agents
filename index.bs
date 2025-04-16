@@ -87,7 +87,8 @@ as little information as practical about the user to the page,
 to the user's environment,
 and to any other interested actor.
 
-Users can opt into sharing more information with a page they visit,
+Users can [[privacy-principles#dfn-opt-in|opt into]]
+sharing more information with a page they visit,
 for example by entering or auto-filling data into form fields,
 or granting permissions to the page.
 Users can also allow the page to make changes to their environment,
