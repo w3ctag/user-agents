@@ -80,8 +80,7 @@ and embodied in the various standards that user agents implement.
 
 [[design-principles#safe-to-browse|It should be safe to visit a web page.]]
 That is, simply visiting a page must not allow
-the page to make changes to the user's computer or environment
-(for example by installing malware),
+the page to make changes to the user's computer or environment,
 and simply visiting should reveal
 as little information as practical about the user to the page,
 to the user's environment,
@@ -91,8 +90,7 @@ Users can [[privacy-principles#dfn-opt-in|opt into]]
 sharing more information with a page they visit,
 for example by entering or auto-filling data into form fields,
 or granting permissions to the page.
-Users can also allow the page to make changes to their environment,
-for example by installing native programs that the page offers.
+Users can also allow the page to make changes to their environment.
 Even in these cases,
 user agents should strive to prevent pages from tricking their users
 and should help their users notice
@@ -142,6 +140,17 @@ This motivates behaviors like
 * removing path components from
     <a element-state for="input" lt="File Upload">`<input type=file>`</a> uploads, and
 * restricting which local fonts can be used in <a at-rule>@font-face</a> rules.
+
+User agents are not expected
+to entirely prevent users from letting web pages read or write local files.
+As mentioned,
+<a element-state for="input" lt="File Upload">`<input type=file>`</a>
+allows uploading file contents,
+and user agents allow people to download files from the web,
+including dangerous executables.
+Smoother experiences like the [[file-system-access inline]] API
+also don't violate any duties,
+as long as users can [[design-principles#consent|meaningfully consent]].
 
 </div>
 
