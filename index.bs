@@ -98,6 +98,52 @@ user agents should strive to prevent pages from tricking their users
 and should help their users notice
 when they might be giving the page more power than they intended.
 
+<div class="example" id="example-protection-exploits" heading="Attacks">
+
+When a person visits a website,
+any malicious code on that site
+is expected to be unable to escape the user agent to modify the person's computer,
+or even to read information stored inside other [=origins=].
+User agents currently satisfy their duty of protection by
+separating different parts of their implementation
+into different sandboxed processes,
+using memory-safe languages for increasing parts of their implementations,
+and employing active security teams to find and respond to vulnerabilities.
+Over time, user agents are expected to systematically improve their defenses
+to keep up with new kinds of attacks.
+
+User agents are also expected
+to use systems like [Safe Browsing](https://developers.google.com/safe-browsing/)
+to notify their users
+when a website is likely to be trying to take advantage of them.
+
+</div>
+
+<div class="example" id="example-protection-tracking" heading="Tracking">
+
+If a person visits a series of unrelated websites,
+it is practical to avoid sending a common identifying cookie
+to iframes embedded on all of those sites.
+A browser that does send such a cookie is failing in its duty of protection.
+However, it is not currently practical
+to avoid revealing the person's computer's stable IP address,
+so a browser that reveals this IP address isn't failing in its duties.
+
+</div>
+
+<div class="example" id="example-protection-local-files" heading="Local Files">
+
+User agents are expected
+to prevent web pages from discovering, reading, or writing local files
+unless their user specifically opens or selects a file
+to expose to a particular page.
+This motivates behaviors like
+* giving each `file:` URL its own [=url/origin=],
+* removing path components from
+    <a element-state for="input" lt="File Upload">`<input type=file>`</a> uploads, and
+* restricting which local fonts can be used in <a at-rule>@font-face</a> rules.
+
+</div>
 
 ## Honesty ## {#honesty}
 
