@@ -110,11 +110,6 @@ and employing active security teams to find and respond to vulnerabilities.
 Over time, user agents are expected to systematically improve their defenses
 to keep up with new kinds of attacks.
 
-User agents are also expected
-to use systems like [Safe Browsing](https://developers.google.com/safe-browsing/)
-to notify their users
-when a website is likely to be trying to take advantage of them.
-
 </div>
 
 <div class="example" id="example-protection-tracking" heading="Tracking">
