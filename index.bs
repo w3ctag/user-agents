@@ -87,7 +87,7 @@ as little information as practical about the user to the page,
 to the user's environment,
 and to any other interested actor.
 
-Users can [[privacy-principles#dfn-opt-in|opt into]]
+Users can <a spec="privacy-principles" lt="opt-in">opt into</a>
 sharing more information with a page they visit,
 for example by entering or auto-filling data into form fields,
 or granting permissions to the page.
