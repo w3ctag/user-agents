@@ -8,7 +8,7 @@
   <meta content="Bikeshed version b25686b9f, updated Fri Mar 14 14:15:20 2025 -0700" name="generator">
   <link href="https://w3ctag.github.io/user-agents" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="ebf207f82354686f2769390d3e8b736fab5b69a1" name="revision">
+  <meta content="e0a25ac7a4dff25caafac4137c2ec495807a3e17" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -570,7 +570,7 @@ dfn > a.self-link::before      { content: "#"; }
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Web User Agents</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2025-04-23">23 April 2025</time></p>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2025-05-07">7 May 2025</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -637,6 +637,7 @@ and embodied in the various standards that user agents implement.</p>
      <a href="#index"><span class="secno"></span> <span class="content">Index</span></a>
      <ol class="toc">
       <li><a href="#index-defined-here"><span class="secno"></span> <span class="content">Terms defined by this specification</span></a>
+      <li><a href="#index-defined-elsewhere"><span class="secno"></span> <span class="content">Terms defined by reference</span></a>
      </ol>
     <li>
      <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
@@ -697,7 +698,7 @@ and simply visiting should reveal
 as little information as practical about the user to the page,
 to the user’s environment,
 and to any other interested actor.</p>
-   <p>Users can <a href="https://w3ctag.github.io/privacy-principles/#dfn-opt-in">opt into</a> sharing more information with a page they visit,
+   <p>Users can <a data-link-type="dfn" href="https://w3ctag.github.io/privacy-principles/#dfn-opt-in" id="ref-for-dfn-opt-in">opt into</a> sharing more information with a page they visit,
 for example by entering or auto-filling data into form fields,
 or granting permissions to the page.
 Users can also allow the page to make changes to their environment,
@@ -734,6 +735,14 @@ and to <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c
   <ul class="index">
    <li><a href="#user-agent">user agent</a><span>, in § 1</span>
    <li><a href="#user-agent">web user agent</a><span>, in § 1</span>
+  </ul>
+  <h3 class="no-num no-ref heading settled" id="index-defined-elsewhere"><span class="content">Terms defined by reference</span><a class="self-link" href="#index-defined-elsewhere"></a></h3>
+  <ul class="index">
+   <li>
+    <a data-link-type="biblio">[PRIVACY-PRINCIPLES]</a> defines the following terms:
+    <ul>
+     <li><span class="dfn-paneled" id="1c5b791f">opt-in</span>
+    </ul>
   </ul>
   <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
   <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
@@ -950,6 +959,7 @@ function parseHTML(markup) {
 "use strict";
 {
 let dfnPanelData = {
+"1c5b791f": {"dfnID":"1c5b791f","dfnText":"opt-in","external":true,"refSections":[{"refs":[{"id":"ref-for-dfn-opt-in"}],"title":"3.1. Protection"}],"url":"https://w3ctag.github.io/privacy-principles/#dfn-opt-in"},
 "user-agent": {"dfnID":"user-agent","dfnText":"web user agent","external":false,"refSections":[{"refs":[{"id":"ref-for-user-agent"}],"title":"1. What is a web user agent"}],"url":"#user-agent"},
 };
 
@@ -1340,6 +1350,7 @@ function genLinkingSyntaxes(dfn) {
 {
 let refsData = {
 "#user-agent": {"displayText":"user agent","export":true,"for_":[],"level":"","normative":true,"shortname":"web-user-agents","spec":"web-user-agents","status":"local","text":"user agent","type":"dfn","url":"#user-agent"},
+"https://w3ctag.github.io/privacy-principles/#dfn-opt-in": {"displayText":"opt-in","export":false,"for_":[],"level":"1","normative":false,"shortname":"privacy-principles","spec":"privacy-principles","status":"current","text":"opt-in","type":"dfn","url":"https://w3ctag.github.io/privacy-principles/#dfn-opt-in"},
 };
 
 function mkRefHint(link, ref) {
