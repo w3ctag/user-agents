@@ -79,24 +79,58 @@ and embodied in the various standards that user agents implement.
 ## Protection ## {#protection}
 
 [[design-principles#safe-to-browse|It should be safe to visit a web page.]]
-That is, simply visiting a page must not allow
-the page to make changes to the user's computer or environment
-(for example by installing malware),
-and simply visiting should reveal
-as little information as practical about the user to the page,
-to the user's environment,
-and to any other interested actor.
+Visiting a page must not by itself let the page change the user's computer or
+environment, such as by installing software, accessing hardware, or exposing
+sensitive data.
 
-Users can <a spec="privacy-principles" lt="opt-in">opt into</a>
-sharing more information with a page they visit,
-for example by entering or auto-filling data into form fields,
-or granting permissions to the page.
-Users can also allow the page to make changes to their environment,
-for example by installing native programs that the page offers.
-Even in these cases,
-user agents should strive to prevent pages from tricking their users
-and should help their users notice
-when they might be giving the page more power than they intended.
+User agents must block known tracking mechanisms unless the user has
+explicitly enabled them. Any data shared should be minimal, purpose driven,
+and aligned with the user's preferences, following [data minimization](https://www.w3.org/TR/design-principles/#data-minimization).
+
+Users may [choose to share more information](https://www.w3.org/TR/privacy-principles/#dfn-opt-in),
+such as by filling out forms or granting permissions.
+Even then, user agents must help users avoid deception and clearly signal when
+a page attempts to gain elevated access.
+
+Access to local files or other sensitive resources must be limited to clear,
+intentional user actions, with appropriate warnings.
+
+<div class="example" id="example-protection-exploits" heading="Attacks">
+
+Malicious code on a site must not be able to escape the user agent to modify
+the user’s computer or access other [=origins=].
+User agents meet this duty of protection by sandboxing components, using
+memory-safe languages, and employing security teams to find and respond to
+vulnerabilities.
+These defenses should continuously evolve to address new threats.
+
+</div>
+
+<div class="example" id="example-protection-tracking" heading="Tracking">
+
+If a person visits unrelated websites, it's feasible to avoid sending a shared
+identifying cookie to embedded iframes.
+A browser that does send such a cookie is failing its duty of protection.
+However, revealing a stable IP address is currently unavoidable, so it's not a
+violation.
+
+</div>
+
+<div class="example" id="example-protection-local-files" heading="Local Files">
+
+User agents are expected prevent pages from accessing local files unless the
+user explicitly selects or opens one.
+This motivates behaviors like
+* giving each `file:` URL its own [=url/origin=],
+* removing path components from
+    <a element-state for="input" lt="File Upload">`<input type=file>`</a> uploads, and
+* restricting which local fonts can be used in <a at-rule>@font-face</a> rules.
+
+However, users may still choose to share files, e.g., via uploads or
+downloads. APIs like [[file-system-access inline]] don’t violate this duty,
+provided users can [[design-principles#consent|meaningfully consent]].
+
+</div>
 
 
 ## Honesty ## {#honesty}
