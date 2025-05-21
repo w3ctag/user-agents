@@ -105,7 +105,7 @@ to modify the user’s computer or access other [=origins=].
 User agents meet this duty of protection by sandboxing components,
 using memory-safe languages,
 and employing security teams to find and respond to vulnerabilities.
-These defenses are expected to evolve continuously to address new threats.
+These defenses need to evolve continuously to address new threats.
 
 </div>
 
