@@ -99,8 +99,8 @@ must be limited to clear, intentional user actions, with appropriate warnings.
 
 <div class="example" id="example-protection-exploits" heading="Attacks">
 
-Malicious code on a site must not
-be able to escape the user agent
+User agents need to prevent malicious code on a site from
+being able to escape the user agent
 to modify the user’s computer or access other [=origins=].
 User agents meet this duty of protection by sandboxing components,
 using memory-safe languages,
