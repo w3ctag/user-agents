@@ -129,7 +129,7 @@ This motivates behaviors like
     <a element-state for="input" lt="File Upload">`<input type=file>`</a> uploads, and
 * restricting which local fonts can be used in <a at-rule>@font-face</a> rules.
 
-However, users may still choose to share files,
+However, users can still choose to share files,
 e.g., via uploads or downloads.
 APIs like [[file-system-access inline]] don’t violate this duty,
 provided users can [[design-principles#consent|meaningfully consent]].
