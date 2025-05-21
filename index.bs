@@ -81,7 +81,7 @@ and embodied in the various standards that user agents implement.
 [[design-principles#safe-to-browse|It should be safe to visit a web page.]]
 Visiting a page must not by itself
 let the page change the user's computer or environment,
-such as by installing software, accessing hardware, or exposing sensitive data.
+such as by installing software or accessing hardware.
 
 User agents must block known tracking mechanisms
 unless the user has explicitly enabled them.
