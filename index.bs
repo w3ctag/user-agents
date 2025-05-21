@@ -83,11 +83,11 @@ Visiting a page must not by itself
 let the page change the user's computer or environment,
 such as by installing software or accessing hardware.
 
-User agents must block known tracking mechanisms
-unless the user has explicitly enabled them.
-Any data shared should be minimal, purpose driven,
-and aligned with the user's preferences,
-following [data minimization](https://www.w3.org/TR/design-principles/#data-minimization).
+Any data revealed to sites or other observers
+should be aligned with the user's preferences
+and follow the principle of [[design-principles#data-minimization|data minimization]].
+In particular, user agents must act to
+limit the potential for sites to track user activity [[unsanctioned-tracking]].
 
 Users may [choose to share more information](https://www.w3.org/TR/privacy-principles/#dfn-opt-in),
 such as by filling out forms or granting permissions.
