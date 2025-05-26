@@ -8,7 +8,7 @@
   <meta content="Bikeshed version b25686b9f, updated Fri Mar 14 14:15:20 2025 -0700" name="generator">
   <link href="https://w3ctag.github.io/user-agents" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="e0a25ac7a4dff25caafac4137c2ec495807a3e17" name="revision">
+  <meta content="bc8bfffc45ca07a3f0d69440e8489a8b931025c9" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -570,7 +570,7 @@ dfn > a.self-link::before      { content: "#"; }
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Web User Agents</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2025-05-07">7 May 2025</time></p>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2025-05-26">26 May 2025</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -691,22 +691,59 @@ A user agent owes its user various duties,
 which should be established through collective discussions
 and embodied in the various standards that user agents implement.</p>
    <h3 class="heading settled" data-level="3.1" id="protection"><span class="secno">3.1. </span><span class="content">Protection</span><a class="self-link" href="#protection"></a></h3>
-   <p><a href="https://w3ctag.github.io/design-principles/#safe-to-browse">It should be safe to visit a web page.</a> That is, simply visiting a page must not allow
-the page to make changes to the user’s computer or environment
-(for example by installing malware),
-and simply visiting should reveal
-as little information as practical about the user to the page,
-to the user’s environment,
-and to any other interested actor.</p>
-   <p>Users can <a data-link-type="dfn" href="https://w3ctag.github.io/privacy-principles/#dfn-opt-in" id="ref-for-dfn-opt-in">opt into</a> sharing more information with a page they visit,
-for example by entering or auto-filling data into form fields,
-or granting permissions to the page.
-Users can also allow the page to make changes to their environment,
-for example by installing native programs that the page offers.
-Even in these cases,
-user agents should strive to prevent pages from tricking their users
-and should help their users notice
-when they might be giving the page more power than they intended.</p>
+   <p><a href="https://w3ctag.github.io/design-principles/#safe-to-browse">It should be safe to visit a web page.</a> Visiting a page must not by itself
+let the page change the user’s computer or environment,
+such as by installing software or accessing hardware.</p>
+   <p>Any data revealed to sites or other observers
+should be aligned with the user’s preferences
+and follow the principle of <a href="https://w3ctag.github.io/design-principles/#data-minimization">data minimization</a>.
+In particular, user agents must act to
+limit the potential for sites to track user activity <a data-link-type="biblio" href="#biblio-unsanctioned-tracking" title="Unsanctioned Web Tracking">[unsanctioned-tracking]</a>.</p>
+   <p>Users may <a href="https://www.w3.org/TR/privacy-principles/#dfn-opt-in">choose to share more information</a>,
+such as by filling out forms or granting permissions.
+Even then, user agents must help users avoid deception and
+clearly signal when a page attempts to gain elevated access.</p>
+   <p>Access to local files or other sensitive resources
+must be limited to clear, intentional user actions, with appropriate warnings.</p>
+   <div class="example no-marker" id="example-protection-exploits">
+    <a class="self-link" href="#example-protection-exploits"></a>
+    <div class="marker">EXAMPLE: Attacks</div>
+    <p>User agents need to prevent malicious code on a site from
+being able to escape the user agent
+to modify the user’s computer or access other <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#concept-origin" id="ref-for-concept-origin">origins</a>.
+User agents meet this duty of protection by sandboxing components,
+using memory-safe languages,
+and employing security teams to find and respond to vulnerabilities.
+These defenses need to evolve continuously to address new threats.</p>
+   </div>
+   <div class="example no-marker" id="example-protection-tracking">
+    <a class="self-link" href="#example-protection-tracking"></a>
+    <div class="marker">EXAMPLE: Tracking</div>
+    <p>If a person visits unrelated websites,
+it’s feasible to avoid sending a shared identifying cookie to embedded iframes.
+A browser that does send such a cookie is failing its duty of protection.
+However, revealing a stable IP address is currently unavoidable,
+so it’s not a violation.</p>
+   </div>
+   <div class="example no-marker" id="example-protection-local-files">
+    <a class="self-link" href="#example-protection-local-files"></a>
+    <div class="marker">EXAMPLE: Local Files</div>
+    <p>User agents are expected prevent pages from accessing local files
+unless the user explicitly selects or opens one.
+This motivates behaviors like</p>
+    <ul>
+     <li data-md>
+      <p>giving each <code>file:</code> URL its own <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-origin" id="ref-for-concept-url-origin">origin</a>,</p>
+     <li data-md>
+      <p>removing path components from <a data-link-type="element-state" href="https://html.spec.whatwg.org/multipage/input.html#file-upload-state-(type%3Dfile)" id="ref-for-file-upload-state-(type%3Dfile)"><code>&lt;input type=file></code></a> uploads, and</p>
+     <li data-md>
+      <p>restricting which local fonts can be used in <a class="css" data-link-type="at-rule" href="https://drafts.csswg.org/css-fonts-5/#at-font-face-rule" id="ref-for-at-font-face-rule">@font-face</a> rules.</p>
+    </ul>
+    <p>However, users can still choose to share files,
+e.g., via uploads or downloads.
+APIs like <a data-biblio-display="inline" data-link-type="biblio" href="https://wicg.github.io/file-system-access/"><cite>File System Access</cite></a> don’t violate this duty,
+provided users can <a href="https://w3ctag.github.io/design-principles/#consent">meaningfully consent</a>.</p>
+   </div>
    <h3 class="heading settled" data-level="3.2" id="honesty"><span class="secno">3.2. </span><span class="content">Honesty</span><a class="self-link" href="#honesty"></a></h3>
    <p>A user agent is responsible to explain to its user what’s going on,
 in terms that user is likely to be able to understand.
@@ -739,9 +776,20 @@ and to <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c
   <h3 class="no-num no-ref heading settled" id="index-defined-elsewhere"><span class="content">Terms defined by reference</span><a class="self-link" href="#index-defined-elsewhere"></a></h3>
   <ul class="index">
    <li>
-    <a data-link-type="biblio">[PRIVACY-PRINCIPLES]</a> defines the following terms:
+    <a data-link-type="biblio">[CSS-FONTS-5]</a> defines the following terms:
     <ul>
-     <li><span class="dfn-paneled" id="1c5b791f">opt-in</span>
+     <li><span class="dfn-paneled" id="0497de86">@font-face</span>
+    </ul>
+   <li>
+    <a data-link-type="biblio">[HTML]</a> defines the following terms:
+    <ul>
+     <li><span class="dfn-paneled" id="6d60ab67">File Upload</span>
+     <li><span class="dfn-paneled" id="086e3aff">origin</span>
+    </ul>
+   <li>
+    <a data-link-type="biblio">[URL]</a> defines the following terms:
+    <ul>
+     <li><span class="dfn-paneled" id="959ad97b">origin</span>
     </ul>
   </ul>
   <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
@@ -749,15 +797,25 @@ and to <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c
   <dl>
    <dt id="biblio-design-principles">[DESIGN-PRINCIPLES]
    <dd>Martin Thomson; Jeffrey Yasskin. <a href="https://w3ctag.github.io/design-principles/"><cite>Web Platform Design Principles</cite></a>. URL: <a href="https://w3ctag.github.io/design-principles/">https://w3ctag.github.io/design-principles/</a>
-   <dt id="biblio-privacy-principles">[PRIVACY-PRINCIPLES]
-   <dd>Robin Berjon; Jeffrey Yasskin. <a href="https://w3ctag.github.io/privacy-principles/"><cite>Privacy Principles</cite></a>. URL: <a href="https://w3ctag.github.io/privacy-principles/">https://w3ctag.github.io/privacy-principles/</a>
    <dt id="biblio-rfc8890">[RFC8890]
    <dd>M. Nottingham. <a href="https://www.rfc-editor.org/rfc/rfc8890"><cite>The Internet is for End Users</cite></a>. August 2020. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc8890">https://www.rfc-editor.org/rfc/rfc8890</a>
   </dl>
   <h3 class="no-num no-ref heading settled" id="informative"><span class="content">Informative References</span><a class="self-link" href="#informative"></a></h3>
   <dl>
+   <dt id="biblio-css-fonts-5">[CSS-FONTS-5]
+   <dd>Chris Lilley. <a href="https://drafts.csswg.org/css-fonts-5/"><cite>CSS Fonts Module Level 5</cite></a>. URL: <a href="https://drafts.csswg.org/css-fonts-5/">https://drafts.csswg.org/css-fonts-5/</a>
+   <dt id="biblio-file-system-access">[FILE-SYSTEM-ACCESS]
+   <dd><a href="https://wicg.github.io/file-system-access/"><cite>File System Access</cite></a>. Draft Community Group Report. URL: <a href="https://wicg.github.io/file-system-access/">https://wicg.github.io/file-system-access/</a>
+   <dt id="biblio-html">[HTML]
+   <dd>Anne van Kesteren; et al. <a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
    <dt id="biblio-infra">[Infra]
    <dd>Anne van Kesteren; Domenic Denicola. <a href="https://infra.spec.whatwg.org/"><cite>Infra Standard</cite></a>. Living Standard. URL: <a href="https://infra.spec.whatwg.org/">https://infra.spec.whatwg.org/</a>
+   <dt id="biblio-privacy-principles">[PRIVACY-PRINCIPLES]
+   <dd>Robin Berjon; Jeffrey Yasskin. <a href="https://w3ctag.github.io/privacy-principles/"><cite>Privacy Principles</cite></a>. URL: <a href="https://w3ctag.github.io/privacy-principles/">https://w3ctag.github.io/privacy-principles/</a>
+   <dt id="biblio-unsanctioned-tracking">[UNSANCTIONED-TRACKING]
+   <dd>Mark Nottingham. <a href="http://www.w3.org/2001/tag/doc/unsanctioned-tracking/"><cite>Unsanctioned Web Tracking</cite></a>. 17 July 2015. TAG Finding. URL: <a href="http://www.w3.org/2001/tag/doc/unsanctioned-tracking/">http://www.w3.org/2001/tag/doc/unsanctioned-tracking/</a>
+   <dt id="biblio-url">[URL]
+   <dd>Anne van Kesteren. <a href="https://url.spec.whatwg.org/"><cite>URL Standard</cite></a>. Living Standard. URL: <a href="https://url.spec.whatwg.org/">https://url.spec.whatwg.org/</a>
   </dl>
 <script>/* Boilerplate: script-dom-helper */
 "use strict";
@@ -959,7 +1017,10 @@ function parseHTML(markup) {
 "use strict";
 {
 let dfnPanelData = {
-"1c5b791f": {"dfnID":"1c5b791f","dfnText":"opt-in","external":true,"refSections":[{"refs":[{"id":"ref-for-dfn-opt-in"}],"title":"3.1. Protection"}],"url":"https://w3ctag.github.io/privacy-principles/#dfn-opt-in"},
+"0497de86": {"dfnID":"0497de86","dfnText":"@font-face","external":true,"refSections":[{"refs":[{"id":"ref-for-at-font-face-rule"}],"title":"3.1. Protection"}],"url":"https://drafts.csswg.org/css-fonts-5/#at-font-face-rule"},
+"086e3aff": {"dfnID":"086e3aff","dfnText":"origin","external":true,"refSections":[{"refs":[{"id":"ref-for-concept-origin"}],"title":"3.1. Protection"}],"url":"https://html.spec.whatwg.org/multipage/browsers.html#concept-origin"},
+"6d60ab67": {"dfnID":"6d60ab67","dfnText":"File Upload","external":true,"refSections":[{"refs":[{"id":"ref-for-file-upload-state-(type%3Dfile)"}],"title":"3.1. Protection"}],"url":"https://html.spec.whatwg.org/multipage/input.html#file-upload-state-(type%3Dfile)"},
+"959ad97b": {"dfnID":"959ad97b","dfnText":"origin","external":true,"refSections":[{"refs":[{"id":"ref-for-concept-url-origin"}],"title":"3.1. Protection"}],"url":"https://url.spec.whatwg.org/#concept-url-origin"},
 "user-agent": {"dfnID":"user-agent","dfnText":"web user agent","external":false,"refSections":[{"refs":[{"id":"ref-for-user-agent"}],"title":"1. What is a web user agent"}],"url":"#user-agent"},
 };
 
@@ -1350,7 +1411,10 @@ function genLinkingSyntaxes(dfn) {
 {
 let refsData = {
 "#user-agent": {"displayText":"user agent","export":true,"for_":[],"level":"","normative":true,"shortname":"web-user-agents","spec":"web-user-agents","status":"local","text":"user agent","type":"dfn","url":"#user-agent"},
-"https://w3ctag.github.io/privacy-principles/#dfn-opt-in": {"displayText":"opt-in","export":false,"for_":[],"level":"1","normative":false,"shortname":"privacy-principles","spec":"privacy-principles","status":"current","text":"opt-in","type":"dfn","url":"https://w3ctag.github.io/privacy-principles/#dfn-opt-in"},
+"https://drafts.csswg.org/css-fonts-5/#at-font-face-rule": {"displayText":"@font-face","export":true,"for_":[],"level":"5","normative":true,"shortname":"css-fonts","spec":"css-fonts-5","status":"current","text":"@font-face","type":"at-rule","url":"https://drafts.csswg.org/css-fonts-5/#at-font-face-rule"},
+"https://html.spec.whatwg.org/multipage/browsers.html#concept-origin": {"displayText":"origin","export":true,"for_":[],"level":"1","normative":true,"shortname":"html","spec":"html","status":"current","text":"origin","type":"dfn","url":"https://html.spec.whatwg.org/multipage/browsers.html#concept-origin"},
+"https://html.spec.whatwg.org/multipage/input.html#file-upload-state-(type%3Dfile)": {"displayText":"File Upload","export":true,"for_":["input"],"level":"1","normative":true,"shortname":"html","spec":"html","status":"current","text":"file upload","type":"element-state","url":"https://html.spec.whatwg.org/multipage/input.html#file-upload-state-(type%3Dfile)"},
+"https://url.spec.whatwg.org/#concept-url-origin": {"displayText":"origin","export":true,"for_":["url"],"level":"1","normative":true,"shortname":"url","spec":"url","status":"current","text":"origin","type":"dfn","url":"https://url.spec.whatwg.org/#concept-url-origin"},
 };
 
 function mkRefHint(link, ref) {
