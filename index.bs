@@ -139,12 +139,20 @@ provided users can [[design-principles#consent|meaningfully consent]].
 
 ## Honesty ## {#honesty}
 
-A user agent is responsible to explain to its user what's going on,
-in terms that user is likely to be able to understand.
-These explanations should happen at appropriate times and frequencies,
-so that they actually help the user understand
-instead of interrupting and distracting the user.
+A user agent mediates between the Web and its user,
+explaining what is happening in a form the user can readily understand.
 
+Explanations often use multiple modalities, including permission prompts, indicators, previews, placement and emphasis, and other cues.
+
+These explanations serve the duty of honesty:
+they should truthfully represent the current state and likely consequences,
+avoid euphemism or ambiguity,
+and make it obvious when sensitive activity is occurring
+(e.g., a clear indicator while audio/video capture is active).
+
+Timing and cadence should be chosen deliberately,
+so explanations arrive when helpful and inform rather than distract,
+helping the user make informed choices.
 
 ## Loyalty ## {#loyalty}
 
