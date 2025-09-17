@@ -5,10 +5,10 @@
   <title>Web User Agents</title>
   <meta content="NOTE-ED" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED" rel="stylesheet">
-  <meta content="Bikeshed version b25686b9f, updated Fri Mar 14 14:15:20 2025 -0700" name="generator">
+  <meta content="Bikeshed version 3f621ba99, updated Mon Jul 28 15:38:36 2025 -0700" name="generator">
   <link href="https://w3ctag.github.io/user-agents" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="bc8bfffc45ca07a3f0d69440e8489a8b931025c9" name="revision">
+  <meta content="b6cf588d434b9167f60cc4aa5c51ef5bdc51dcfe" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -568,9 +568,13 @@ dfn > a.self-link::before      { content: "#"; }
 </style>
  <body class="h-entry">
   <div class="head">
-   <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
+   <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/">
+    <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
+</a>
+</p>
    <h1 class="p-name no-ref" id="title">Web User Agents</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2025-05-26">26 May 2025</time></p>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>,
+    <time class="dt-updated" datetime="2025-09-17">17 September 2025</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -586,7 +590,8 @@ dfn > a.self-link::before      { content: "#"; }
     </div>
    </details>
    <div data-fill-with="warning"></div>
-   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/policies/#copyright">Copyright</a> © 2025 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/copyright/software-license/" rel="license" title="W3C Software and Document License">permissive document license</a> rules apply. </p>
+   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/policies/#copyright">Copyright</a> © 2025 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/copyright/software-license/" rel="license" title="W3C Software and Document License">permissive document license</a> rules apply.
+</p>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
@@ -601,23 +606,38 @@ and embodied in the various standards that user agents implement.</p>
   </div>
   <h2 class="no-num no-toc no-ref heading settled" id="sotd"><span class="content">Status of this document</span></h2>
   <div data-fill-with="status">
-   <p> <em>This section describes the status of this document at the time of its
-    publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the
+   <p>
+    <em>This section describes the status of this document at the time of its
+    publication. A list of current
+    <abbr title="World Wide Web Consortium">W3C</abbr> publications and the
     latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web
-    Consortium">W3C</abbr> standards and drafts index</a> at https://www.w3.org/TR/.</em> </p>
-   <p> This document was published by the <a href="https://www.w3.org/groups/other/tag/">Technical Architecture Group</a> as an Editor’s Draft intended for the Note track.
+    Consortium">W3C</abbr> standards and drafts index</a>.</em>
+  </p>
+   <p>
+    This document was published by the <a href="https://www.w3.org/groups/other/tag/">Technical Architecture Group</a>
+    as an Editor’s Draft intended for the Note track.
     This is a draft document and
-    may be updated, replaced or obsoleted by other documents at any time.
-    It is inappropriate to cite this document as other than work in progress.
+    may be updated, replaced, or obsoleted by other documents at any time.
+    It is inappropriate to cite this document as other than a work in progress.
     Editor’s Drafts are not endorsed by <abbr title="World Wide Web
-    Consortium">W3C</abbr> nor its Members. </p>
+    Consortium">W3C</abbr> nor its Members.
+  </p>
    <p></p>
-   <p> Feedback and comments on this document are welcome. Please <a href="https://github.com/w3ctag/user-agents/issues">file an issue</a> in this document’s <a href="https://github.com/w3ctag/user-agents/">GitHub repository</a>. </p>
-   <p data-deliverer="34270"> The <a href="https://www.w3.org/policies/patent-policy/"><abbr title="World
+   <p>
+    Feedback and comments on this document are welcome. Please
+    <a href="https://github.com/w3ctag/user-agents/issues">file an issue</a>
+    in this document’s
+    <a href="https://github.com/w3ctag/user-agents/">GitHub repository</a>.
+  </p>
+   <p data-deliverer="34270">
+    The <a href="https://www.w3.org/policies/patent-policy/"><abbr title="World
     Wide Web Consortium">W3C</abbr> Patent Policy</a> does not carry any
-    licensing requirements or commitments on this document. </p>
-   <p> This document is governed by the <a href="https://www.w3.org/policies/process/20231103/" id="w3c_process_revision">03 November 2023 W3C
-    Process Document</a>. </p>
+    licensing requirements or commitments on this document.
+  </p>
+   <p>
+    This document is governed by the <a href="https://www.w3.org/policies/process/20250818/" id="w3c_process_revision">18 August 2025 W3C
+    Process Document</a>.
+  </p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
@@ -652,7 +672,7 @@ and embodied in the various standards that user agents implement.</p>
    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-export data-lt="user agent|web user agent" id="user-agent">web user agent</dfn> is
 any software entity that interacts with websites outside the entity itself,
 on behalf of its user,
-including just to display the content of websites.
+including simply rendering the content of websites.
 In web specifications and the rest of this document,
 web user agents are usually referred to as just "<a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent">user agents</a>",
 but there are other kinds of user agents in other domains,
@@ -691,7 +711,8 @@ A user agent owes its user various duties,
 which should be established through collective discussions
 and embodied in the various standards that user agents implement.</p>
    <h3 class="heading settled" data-level="3.1" id="protection"><span class="secno">3.1. </span><span class="content">Protection</span><a class="self-link" href="#protection"></a></h3>
-   <p><a href="https://w3ctag.github.io/design-principles/#safe-to-browse">It should be safe to visit a web page.</a> Visiting a page must not by itself
+   <p><a href="https://w3ctag.github.io/design-principles/#safe-to-browse">It should be safe to visit a web page.</a>
+Visiting a page must not by itself
 let the page change the user’s computer or environment,
 such as by installing software or accessing hardware.</p>
    <p>Any data revealed to sites or other observers
@@ -728,14 +749,15 @@ so it’s not a violation.</p>
    <div class="example no-marker" id="example-protection-local-files">
     <a class="self-link" href="#example-protection-local-files"></a>
     <div class="marker">EXAMPLE: Local Files</div>
-    <p>User agents are expected prevent pages from accessing local files
+    <p>User agents are expected to prevent pages from accessing local files
 unless the user explicitly selects or opens one.
-This motivates behaviors like</p>
+This motivates behaviors like:</p>
     <ul>
      <li data-md>
       <p>giving each <code>file:</code> URL its own <a data-link-type="dfn" href="https://url.spec.whatwg.org/#concept-url-origin" id="ref-for-concept-url-origin">origin</a>,</p>
      <li data-md>
-      <p>removing path components from <a data-link-type="element-state" href="https://html.spec.whatwg.org/multipage/input.html#file-upload-state-(type%3Dfile)" id="ref-for-file-upload-state-(type%3Dfile)"><code>&lt;input type=file></code></a> uploads, and</p>
+      <p>removing path components from
+<a data-link-type="element-state" href="https://html.spec.whatwg.org/multipage/input.html#file-upload-state-(type%3Dfile)" id="ref-for-file-upload-state-(type%3Dfile)"><code>&lt;input type=file></code></a> uploads, and</p>
      <li data-md>
       <p>restricting which local fonts can be used in <a class="css" data-link-type="at-rule" href="https://drafts.csswg.org/css-fonts-5/#at-font-face-rule" id="ref-for-at-font-face-rule">@font-face</a> rules.</p>
     </ul>
@@ -762,7 +784,8 @@ make a credible commitment to a page in order to get that page’s services,
 and it’s not disloyal to maintain that commitment after getting the services.</p>
    <section class="non-normative">
     <h2 class="heading settled" data-level="4" id="acknowledgements"><span class="secno">4. </span><span class="content">Acknowledgements</span><a class="self-link" href="#acknowledgements"></a></h2>
-    <p>Thanks to the <a data-biblio-display="inline" data-link-type="biblio" href="https://infra.spec.whatwg.org/"><cite>Infra Standard</cite></a> for an earlier definition of User Agents
+    <p>Thanks to the <a data-biblio-display="inline" data-link-type="biblio" href="https://infra.spec.whatwg.org/"><cite>Infra Standard</cite></a>
+for an earlier definition of User Agents
 and to <a data-biblio-display="inline" data-link-type="biblio" href="https://w3ctag.github.io/privacy-principles/"><cite>Privacy Principles</cite></a> for the initial version of these duties.</p>
    </section>
   </main>
