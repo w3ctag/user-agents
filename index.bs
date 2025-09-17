@@ -76,6 +76,10 @@ what behavior they should expect from different parts of the app.
 If the distinction between third-party and first-party content is too small,
 the application should also follow the [=user agent duties=]
 for its first-party content.
+For example, if the application doesn't show a distinct address bar
+when browsing third-party content,
+that likely means that
+its first-party pieces should also follow the [=user agent duties=].
 
 Similarly a library that implements the web platform
 may or may not be a full [=user agent=].
