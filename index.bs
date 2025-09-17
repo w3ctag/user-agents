@@ -99,7 +99,8 @@ and they don't implement the [=user agent duties=].
 Ultimately, an embedding application is responsible for ensuring
 that it follows the [=user agent duties=] if it or part of it is a [=user agent=].
 This can be nearly trivial if it only browses third-party content using a [=user agent=] library.
-Developers need to  take more care
+Developers need to take extra care
+to follow the [=user agent duties=]
 when implementing an in-app browser using a non-[=user agent=] WebView.
 
 # Duties of user agents # {#duties}
