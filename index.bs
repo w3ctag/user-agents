@@ -27,7 +27,7 @@ Abstract: Web user agents include both web browsers and other intermediaries
 A <dfn lt="user agent|web user agent" export>web user agent</dfn> is
 any software entity that interacts with websites outside the entity itself,
 on behalf of its user,
-including to simply render the content of websites.
+including simply rendering the content of websites.
 In web specifications and the rest of this document,
 web user agents are usually referred to as just "[=user agents=]",
 but there are other kinds of user agents in other domains,
