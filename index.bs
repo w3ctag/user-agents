@@ -49,24 +49,6 @@ and they implement proprietary user interfaces and other behavior
 around the specifications they do implement.
 
 
-# How the ecosystem works # {#ecosystem}
-
-The structure of the web browser market helps ensure that browsers act as trustworthy agents,
-but it can also give them conflicts of interest.
-There are many browsers available for free,
-which allows users to switch away from a browser that violates their trust.
-Security and privacy researchers also actively investigate browser behavior
-and publicize any unexpected or user-hostile behavior,
-which helps users pick a browser and be confident that it's trustworthy.
-These researchers benefit from the parts of browsers that are open source.
-
-The trustworthiness of the available browsers is further aided
-by a culture of service to end-users among the people who develop browsers.
-However, we can't just assume that culture will sustain itself:
-it's important that browsers which lose that culture also lose in the marketplace,
-fast enough to prevent the culture-loss from spreading.
-
-
 # Duties of user agents # {#duties}
 
 Each user agent serves its user ([[!RFC8890 inline]]),
