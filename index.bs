@@ -22,6 +22,14 @@ Abstract: Web user agents include both web browsers and other intermediaries
 
 </pre>
 
+# Audience # {#audience}
+
+This document is intended for:
+
+* **User agent developers** who want to align implementations with design and privacy principles that prioritize their users.
+* **Regulators and policymakers** who need criteria to assess whether user agents fulfill their duties to users.
+* **Technical authors** who want to reuse or reference these concepts in their own specifications or documentation.
+
 # What is a web user agent # {#what}
 
 A <dfn lt="user agent|web user agent" export>web user agent</dfn> is
