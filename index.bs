@@ -63,16 +63,15 @@ around the specifications they do implement.
 As software entities, user agents can be parts of larger applications,
 and they can call libraries that implement the web platform or parts of it.
 
-If the user of an application
-can distinguish the user agent inside that application
-from other parts of the application
-that act on the application's author's behalf
-("first-party" parts of the application),
+If an overall application makes a clear distinction
+between its pieces that are [=user agents=] and its pieces that aren't,
 then only the [=user agent=] parts,
 which browse "third-party" content,
 need to follow the [=user agent duties=].
-Applications with embedded user agents should
-give their users clear expectations about
+Parts that are clearly only showing the application's own content
+can act on their own behalf,
+but the application should still
+give its users clear expectations about
 what behavior they should expect from different parts of the app.
 If the distinction between third-party and first-party content is too small,
 the application should also follow the [=user agent duties=]
