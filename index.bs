@@ -121,9 +121,10 @@ so it's not a violation.
 
 <div class="example" id="example-protection-local-files" heading="Local Files">
 
-User agents are expected prevent pages from accessing local files
+User agents are expected to prevent pages from accessing local files
 unless the user explicitly selects or opens one.
-This motivates behaviors like
+This motivates behaviors like:
+
 * giving each `file:` URL its own [=url/origin=],
 * removing path components from
     <a element-state for="input" lt="File Upload">`<input type=file>`</a> uploads, and
