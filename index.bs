@@ -160,6 +160,9 @@ A user agent can also help its user
 make a credible commitment to a page in order to get that page's services,
 and it's not disloyal to maintain that commitment after getting the services.
 
+A user agent should facilitate its users to switch to another user agent.
+It must not block access to or store user data in formats that prevent portability,
+including identity information, bookmarks, history, or passwords.
 
 <section class="non-normative">
 
