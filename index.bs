@@ -140,7 +140,7 @@ provided users can [[design-principles#consent|meaningfully consent]].
 ## Honesty ## {#honesty}
 
 A user agent must mediate between the Web and its user,
-explaining what is happening in a form the user can readily understand.
+explaining what is happening in a form the user can understand.
 
 User agent may use multiple approaches for explanations, including text, permission prompts, indicators, previews, placement and emphasis, and other cues.
 
