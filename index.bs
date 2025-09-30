@@ -142,7 +142,8 @@ provided users can [[design-principles#consent|meaningfully consent]].
 A user agent must mediate between the Web and its user,
 explaining what is happening in a form the user can understand.
 
-User agent may use multiple approaches for explanations, including text, permission prompts, indicators, previews, placement and emphasis, and other cues.
+A user agent may use multiple approaches for explanations, including
+text, permission prompts, indicators, previews, placement and emphasis, and other cues.
 
 These explanations serve the duty of honesty:
 they should truthfully represent the current state and likely consequences,
