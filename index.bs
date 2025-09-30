@@ -151,7 +151,7 @@ avoid euphemism or ambiguity,
 and make it obvious when sensitive activity is occurring
 (e.g., a clear indicator while audio/video capture is active).
 
-Timing and cadence should be chosen deliberately,
+The user agent should choose when and how often to show these explanations,
 so explanations arrive when helpful and inform rather than distract,
 helping the user make informed choices.
 
