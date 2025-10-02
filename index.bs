@@ -29,6 +29,7 @@ This document is intended for:
 * **User agent developers** who want to align implementations with design and privacy principles that prioritize their users.
 * **Regulators and policymakers** who need criteria to assess whether user agents fulfill their duties to users.
 * **Technical authors** who want to reuse or reference these concepts in their own specifications or documentation.
+* **Web developers** who want to understand why user agents prioritize user privacy and security over other constituencies, including developer convenience.
 
 # What is a web user agent # {#what}
 
