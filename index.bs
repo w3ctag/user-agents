@@ -161,8 +161,10 @@ make a credible commitment to a page in order to get that page's services,
 and it's not disloyal to maintain that commitment after getting the services.
 
 A user agent must not obstruct its users from switching to another user agent.
-For example, it must not block access to or store user data in formats that prevent portability,
-including identity information, bookmarks, history, or passwords.
+For example, it must not block access to, export, or store user data in ways that prevent portability.
+This includes identity information, bookmarks, history, passwords, and credentials such as passkeys.
+Passkeys may be stored by the OS at the browser's request,
+which can make it challenging for users to switch user agents.
 
 <section class="non-normative">
 
