@@ -143,7 +143,10 @@ A user agent must mediate between the Web and its user,
 explaining what is happening in a form the user can understand.
 
 A user agent may use multiple approaches for explanations, including
-text, permission prompts, indicators, previews, placement and emphasis, and other cues.
+text, permission prompts, indicators, previews, and other interface elements.
+Consider the placement of these elements and whether anything needs emphasis.
+See, for example, [Privacy Indicator Requirements](https://www.w3.org/TR/mediacapture-streams/#privacy-indicator-requirements)
+of the <cite>Media Capture and Streams</cite> specification.
 
 An honest user agent actively works to present the truth to its user.
 It doesn't just avoid lies.
