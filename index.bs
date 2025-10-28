@@ -154,8 +154,8 @@ and make it obvious when sensitive activity is occurring.
 For example, the user agent might show a clear indicator while audio or video is being captured.
 
 The user agent should choose when and how often to show these explanations,
-so explanations arrive when helpful and inform rather than distract,
-helping the user make informed choices.
+so explanations arrive when helpful and inform rather than distract.
+The user agent should ensure the user can control if and when they make a decision.
 
 ## Loyalty ## {#loyalty}
 
