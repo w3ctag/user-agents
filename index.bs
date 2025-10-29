@@ -33,7 +33,8 @@ This document is intended for:
 
 # What is a web user agent # {#what}
 
-A <dfn lt="user agent|web user agent" export>web user agent</dfn> is
+<!-- TODO: Export this once it can replace the Infra definition. -->
+A <dfn lt="user agent|web user agent" noexport>web user agent</dfn> is
 any software entity that interacts with websites outside the entity itself,
 on behalf of its user,
 including simply rendering the content of websites.
