@@ -124,7 +124,7 @@ This motivates behaviors like:
 However, users can still choose to share files,
 e.g., via uploads or downloads.
 APIs like [[file-system-access inline]] don’t violate this duty,
-provided users can [[design-principles#consent|meaningfully consent]].
+provided users have the tools to [[design-principles#user-decisions|make good decisions]].
 
 </div>
 
