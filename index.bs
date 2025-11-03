@@ -163,8 +163,9 @@ and it's not disloyal to maintain that commitment after getting the services.
 A user agent must not obstruct its users from switching to another user agent.
 For example, it must not block access to, export, or store user data in ways that prevent portability.
 This includes identity information, bookmarks, history, passwords, and credentials such as passkeys.
-Credentials may be stored by the OS at the browser's request,
-which can make it challenging for users to switch user agents.
+If a user agent asks the underlying OS to store credentials for it,
+there needs to be a way for the user
+to allow another user agent to read those credentials.
 
 <section class="non-normative">
 
