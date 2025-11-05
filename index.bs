@@ -22,12 +22,22 @@ Abstract: Web user agents include both web browsers and other intermediaries
 
 </pre>
 
+# Audience # {#audience}
+
+This document is intended for:
+
+* **Technical authors** who want to reuse or reference these concepts in their own specifications or documentation.
+* **User agent developers** who want to align implementations with design and privacy principles that prioritize their users.
+* **Web developers** who want to understand why user agents prioritize user privacy and security over other constituencies, including developer convenience.
+* **Regulators and policymakers** who seek to understand the duties, principles, and expectations guiding user agent behavior.
+
 # What is a web user agent # {#what}
 
-A <dfn lt="user agent|web user agent" export>web user agent</dfn> is
+<!-- TODO: Export this once it can replace the Infra definition. -->
+A <dfn lt="user agent|web user agent" noexport>web user agent</dfn> is
 any software entity that interacts with websites outside the entity itself,
 on behalf of its user,
-including just to display the content of websites.
+including simply rendering the content of websites.
 In web specifications and the rest of this document,
 web user agents are usually referred to as just "[=user agents=]",
 but there are other kinds of user agents in other domains,
@@ -47,24 +57,6 @@ In particular,
 user agents choose which specifications to implement in order to best serve their users,
 and they implement proprietary user interfaces and other behavior
 around the specifications they do implement.
-
-
-# How the ecosystem works # {#ecosystem}
-
-The structure of the web browser market helps ensure that browsers act as trustworthy agents,
-but it can also give them conflicts of interest.
-There are many browsers available for free,
-which allows users to switch away from a browser that violates their trust.
-Security and privacy researchers also actively investigate browser behavior
-and publicize any unexpected or user-hostile behavior,
-which helps users pick a browser and be confident that it's trustworthy.
-These researchers benefit from the parts of browsers that are open source.
-
-The trustworthiness of the available browsers is further aided
-by a culture of service to end-users among the people who develop browsers.
-However, we can't just assume that culture will sustain itself:
-it's important that browsers which lose that culture also lose in the marketplace,
-fast enough to prevent the culture-loss from spreading.
 
 
 # Duties of user agents # {#duties}
@@ -121,9 +113,10 @@ so it's not a violation.
 
 <div class="example" id="example-protection-local-files" heading="Local Files">
 
-User agents are expected prevent pages from accessing local files
+User agents are expected to prevent pages from accessing local files
 unless the user explicitly selects or opens one.
-This motivates behaviors like
+This motivates behaviors like:
+
 * giving each `file:` URL its own [=url/origin=],
 * removing path components from
     <a element-state for="input" lt="File Upload">`<input type=file>`</a> uploads, and
@@ -132,7 +125,7 @@ This motivates behaviors like
 However, users can still choose to share files,
 e.g., via uploads or downloads.
 APIs like [[file-system-access inline]] don’t violate this duty,
-provided users can [[design-principles#consent|meaningfully consent]].
+provided users have the tools to [[design-principles#user-decisions|make good decisions]].
 
 </div>
 
