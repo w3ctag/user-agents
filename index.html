@@ -5,10 +5,10 @@
   <title>Web User Agents</title>
   <meta content="NOTE-ED" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED" rel="stylesheet">
-  <meta content="Bikeshed version 3f621ba99, updated Mon Jul 28 15:38:36 2025 -0700" name="generator">
+  <meta content="Bikeshed version 1453201ca, updated Wed Nov 5 21:01:59 2025 +0000" name="generator">
   <link href="https://w3ctag.github.io/user-agents" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="bacfcf384f7bdf6b269c65169754112228f3c1d1" name="revision">
+  <meta content="4f23c1350abe8f4a414b19b76a73f33103a231f4" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -321,7 +321,7 @@ body {
 }
 .invalid.example:not(.no-marker)::before,
 .illegal.example:not(.no-marker)::before {
-    content: "Invalid Example" counter(example);
+    content: "Invalid Example " counter(example);
 }
 
 figcaption {
@@ -572,9 +572,9 @@ dfn > a.self-link::before      { content: "#"; }
     <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
 </a>
 </p>
-   <h1 class="p-name no-ref" id="title">Web User Agents</h1>
+   <h1 class="no-ref p-name" id="title">Web User Agents</h1>
    <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>,
-    <time class="dt-updated" datetime="2025-10-29">29 October 2025</time></p>
+    <time class="dt-updated" datetime="2025-11-05">5 November 2025</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -584,8 +584,8 @@ dfn > a.self-link::before      { content: "#"; }
       <dt>Issue Tracking:
       <dd><a href="https://github.com/w3ctag/user-agents/issues/">GitHub</a>
       <dt class="editor">Editors:
-      <dd class="editor p-author h-card vcard" data-editor-id="72192"><a class="p-name fn u-email email" href="mailto:jyasskin@google.com">Jeffrey Yasskin</a> (<a class="p-org org" href="https://google.com">Google</a>)
-      <dd class="editor p-author h-card vcard" data-editor-id="46140"><a class="p-name fn u-url url" href="https://csarven.ca/">Sarven Capadisli</a> (<span class="p-org org">Invited Expert</span>)
+      <dd class="editor h-card p-author vcard" data-editor-id="72192"><a class="email fn p-name u-email" href="mailto:jyasskin@google.com">Jeffrey Yasskin</a> (<a class="org p-org" href="https://google.com">Google</a>)
+      <dd class="editor h-card p-author vcard" data-editor-id="46140"><a class="fn p-name u-url url" href="https://csarven.ca/">Sarven Capadisli</a> (<span class="org p-org">Invited Expert</span>)
      </dl>
     </div>
    </details>
@@ -595,7 +595,7 @@ dfn > a.self-link::before      { content: "#"; }
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
-   <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
+   <h2 class="heading no-num no-ref no-toc settled" id="abstract"><span class="content">Abstract</span></h2>
    <p>Web user agents include both web browsers and other intermediaries
 between end-users and the web.
 Each user agent serves its user,
@@ -604,7 +604,7 @@ A user agent owes its user various duties,
 which should be established through collective discussions
 and embodied in the various standards that user agents implement.</p>
   </div>
-  <h2 class="no-num no-toc no-ref heading settled" id="sotd"><span class="content">Status of this document</span></h2>
+  <h2 class="heading no-num no-ref no-toc settled" id="sotd"><span class="content">Status of this document</span></h2>
   <div data-fill-with="status">
    <p>
     <em>This section describes the status of this document at the time of its
@@ -641,7 +641,7 @@ and embodied in the various standards that user agents implement.</p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
-   <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
+   <h2 class="no-num no-ref no-toc" id="contents">Table of Contents</h2>
    <ol class="toc" role="directory">
     <li><a href="#audience"><span class="secno">1</span> <span class="content">Audience</span></a>
     <li><a href="#what"><span class="secno">2</span> <span class="content">What is a web user agent</span></a>
@@ -681,7 +681,7 @@ and embodied in the various standards that user agents implement.</p>
      <p><strong>Regulators and policymakers</strong> who seek to understand the duties, principles, and expectations guiding user agent behavior.</p>
    </ul>
    <h2 class="heading settled" data-level="2" id="what"><span class="secno">2. </span><span class="content">What is a web user agent</span><a class="self-link" href="#what"></a></h2>
-   <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-export data-lt="user agent|web user agent" id="user-agent">web user agent</dfn> is
+   <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="user agent|web user agent" data-noexport id="user-agent">web user agent</dfn> is
 any software entity that interacts with websites outside the entity itself,
 on behalf of its user,
 including simply rendering the content of websites.
@@ -788,13 +788,13 @@ and to <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c
    </section>
   </main>
   <script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script>
-  <h2 class="no-num no-ref heading settled" id="index"><span class="content">Index</span><a class="self-link" href="#index"></a></h2>
-  <h3 class="no-num no-ref heading settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="#index-defined-here"></a></h3>
+  <h2 class="heading no-num no-ref settled" id="index"><span class="content">Index</span><a class="self-link" href="#index"></a></h2>
+  <h3 class="heading no-num no-ref settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="#index-defined-here"></a></h3>
   <ul class="index">
    <li><a href="#user-agent">user agent</a><span>, in § 2</span>
    <li><a href="#user-agent">web user agent</a><span>, in § 2</span>
   </ul>
-  <h3 class="no-num no-ref heading settled" id="index-defined-elsewhere"><span class="content">Terms defined by reference</span><a class="self-link" href="#index-defined-elsewhere"></a></h3>
+  <h3 class="heading no-num no-ref settled" id="index-defined-elsewhere"><span class="content">Terms defined by reference</span><a class="self-link" href="#index-defined-elsewhere"></a></h3>
   <ul class="index">
    <li>
     <a data-link-type="biblio">[CSS-FONTS-5]</a> defines the following terms:
@@ -813,15 +813,15 @@ and to <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c
      <li><span class="dfn-paneled" id="959ad97b">origin</span>
     </ul>
   </ul>
-  <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
-  <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
+  <h2 class="heading no-num no-ref settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
+  <h3 class="heading no-num no-ref settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
   <dl>
    <dt id="biblio-design-principles">[DESIGN-PRINCIPLES]
    <dd>Martin Thomson; Jeffrey Yasskin. <a href="https://w3ctag.github.io/design-principles/"><cite>Web Platform Design Principles</cite></a>. URL: <a href="https://w3ctag.github.io/design-principles/">https://w3ctag.github.io/design-principles/</a>
    <dt id="biblio-rfc8890">[RFC8890]
    <dd>M. Nottingham. <a href="https://www.rfc-editor.org/rfc/rfc8890"><cite>The Internet is for End Users</cite></a>. August 2020. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc8890">https://www.rfc-editor.org/rfc/rfc8890</a>
   </dl>
-  <h3 class="no-num no-ref heading settled" id="informative"><span class="content">Informative References</span><a class="self-link" href="#informative"></a></h3>
+  <h3 class="heading no-num no-ref settled" id="informative"><span class="content">Informative References</span><a class="self-link" href="#informative"></a></h3>
   <dl>
    <dt id="biblio-css-fonts-5">[CSS-FONTS-5]
    <dd>Chris Lilley. <a href="https://drafts.csswg.org/css-fonts-5/"><cite>CSS Fonts Module Level 5</cite></a>. URL: <a href="https://drafts.csswg.org/css-fonts-5/">https://drafts.csswg.org/css-fonts-5/</a>
