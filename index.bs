@@ -132,12 +132,26 @@ provided users have the tools to [[design-principles#user-decisions|make good de
 
 ## Honesty ## {#honesty}
 
-A user agent is responsible to explain to its user what's going on,
-in terms that user is likely to be able to understand.
-These explanations should happen at appropriate times and frequencies,
-so that they actually help the user understand
-instead of interrupting and distracting the user.
+A user agent must mediate between the Web and its user,
+explaining what is happening in a form the user can understand.
 
+A user agent may use multiple approaches for explanations, including
+text, permission prompts, indicators, previews, and other interface elements.
+Consider the placement of these elements and whether anything needs emphasis.
+See, for example, [Privacy Indicator Requirements](https://www.w3.org/TR/mediacapture-streams/#privacy-indicator-requirements)
+of the <cite>Media Capture and Streams</cite> specification.
+
+An honest user agent actively works to present the truth to its user.
+It doesn't just avoid lies.
+Its explanations
+should clearly represent the current state and likely consequences,
+avoid euphemism or ambiguity,
+and make it obvious when sensitive activity is occurring.
+For example, the user agent might show a clear indicator while audio or video is being captured.
+
+The user agent should choose when and how often to show these explanations,
+so explanations arrive when helpful and inform rather than distract.
+The user agent should ensure the user can control if and when they make a decision.
 
 ## Loyalty ## {#loyalty}
 
