@@ -19,5 +19,4 @@ jobs:
             status: NOTE-WD
             TR: https://www.w3.org/TR/web-user-agents/
           W3C_ECHIDNA_TOKEN: ${{ secrets.ECHIDNA_TOKEN }}
-          # Replace following with appropriate value. See options.md for details.
           W3C_WG_DECISION_URL: https://github.com/w3ctag/meetings/blob/gh-pages/2025/09-Hong-Kong/09-17-minutes.md#agreement-to-publish-it-as-a-draft-note-and-echidna-it
