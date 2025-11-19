@@ -84,9 +84,9 @@ Similarly a library that implements the web platform
 may or may not be a full [=user agent=].
 Some, like [`SFSafariViewController`](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller)
 and [Android Custom Tabs](https://developer.chrome.com/docs/android/custom-tabs)
-take the responsibility of implementing the [=user agent duties=]
-and of making a clear distinction between the external content they browse
-and the content controlled by the embedded application.
+take on the responsibility of implementing the [=user agent duties=]
+and of clearly distinguishing between the external content they browse
+and the content controlled by the embedding application.
 These libraries are [=user agents=].
 
 Other libraries, like the
