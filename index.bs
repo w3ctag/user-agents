@@ -63,7 +63,7 @@ around the specifications they do implement.
 As software entities, user agents can be parts of larger applications,
 and they can call libraries that implement the web platform or parts of it.
 
-If an overall application makes a clear distinction
+When an application makes a clear distinction
 between its pieces that are [=user agents=] and its pieces that aren't,
 then only the [=user agent=] parts,
 which browse content from outside the user agent itself,
@@ -72,7 +72,7 @@ Parts that are clearly only showing the application's own content
 can act on their own behalf,
 but the application should still
 give its users clear expectations about
-what behavior they should expect from different parts of the app.
+what behavior they should expect from different parts of the application.
 If the distinction between internal and external content is too small—for example
 if the application doesn't show an address bar
 or another indicator of content origin
