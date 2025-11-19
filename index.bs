@@ -95,9 +95,9 @@ Other libraries, like the
 and [Windows](https://developer.microsoft.com/en-us/Microsoft-edge/webview2/)
 WebView libraries,
 are designed to support many kinds of applications.
-Because some of these applications only include their own content,
-WebView libraries aren't meant to be [=user agents=] on their own,
-and they don't implement the [=user agent duties=].
+Because some of these applications include only their own content,
+WebView libraries are not meant to be [=user agents=] on their own,
+and they do not implement the [=user agent duties=].
 
 Ultimately, an embedding application is responsible for ensuring
 that it follows the [=user agent duties=] if it or part of it is a [=user agent=].
