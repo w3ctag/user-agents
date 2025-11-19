@@ -73,13 +73,12 @@ can act on their own behalf,
 but the application should still
 give its users clear expectations about
 what behavior they should expect from different parts of the app.
-If the distinction between internal and external content is too small,
+If the distinction between internal and external content is too small—for example
+if the application doesn't show an address bar
+or another indicator of content origin
+when browsing external content—then
 the application should also follow the [=user agent duties=]
-for its own content.
-For example, if the application doesn't show a distinct address bar
-when browsing external content,
-that likely means that
-the pieces shipped with the application should also follow the [=user agent duties=].
+when showing its own content.
 
 Similarly a library that implements the web platform
 may or may not be a full [=user agent=].
