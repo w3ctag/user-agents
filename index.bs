@@ -66,28 +66,28 @@ and they can call libraries that implement the web platform or parts of it.
 If an overall application makes a clear distinction
 between its pieces that are [=user agents=] and its pieces that aren't,
 then only the [=user agent=] parts,
-which browse "third-party" content,
+which browse content from outside the user agent itself,
 need to follow the [=user agent duties=].
 Parts that are clearly only showing the application's own content
 can act on their own behalf,
 but the application should still
 give its users clear expectations about
 what behavior they should expect from different parts of the app.
-If the distinction between third-party and first-party content is too small,
+If the distinction between internal and external content is too small,
 the application should also follow the [=user agent duties=]
-for its first-party content.
+for its own content.
 For example, if the application doesn't show a distinct address bar
-when browsing third-party content,
+when browsing external content,
 that likely means that
-its first-party pieces should also follow the [=user agent duties=].
+the pieces shipped with the application should also follow the [=user agent duties=].
 
 Similarly a library that implements the web platform
 may or may not be a full [=user agent=].
 Some, like [`SFSafariViewController`](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller)
 and [Android Custom Tabs](https://developer.chrome.com/docs/android/custom-tabs)
 take the responsibility of implementing the [=user agent duties=]
-and of making a clear distinction between the third-party content they browse
-and the first-party content controlled by the embedded application.
+and of making a clear distinction between the external content they browse
+and the content controlled by the embedded application.
 These libraries are [=user agents=].
 
 Other libraries, like the
@@ -96,13 +96,13 @@ Other libraries, like the
 and [Windows](https://developer.microsoft.com/en-us/Microsoft-edge/webview2/)
 WebView libraries,
 are designed to support many kinds of applications.
-Because some of these applications only include first-party content,
+Because some of these applications only include their own content,
 WebView libraries aren't meant to be [=user agents=] on their own,
 and they don't implement the [=user agent duties=].
 
 Ultimately, an embedding application is responsible for ensuring
 that it follows the [=user agent duties=] if it or part of it is a [=user agent=].
-This can be nearly trivial if it only browses third-party content using a [=user agent=] library.
+This can be nearly trivial if it only browses external content using a [=user agent=] library.
 Developers need to take extra care
 to follow the [=user agent duties=]
 when implementing an in-app browser using a non-[=user agent=] WebView.
