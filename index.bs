@@ -60,8 +60,8 @@ around the specifications they do implement.
 
 ## User agents as software components ## {#ua-as-software}
 
-As software entities, user agents can be parts of larger applications,
-and they can call libraries that implement the web platform or parts of it.
+As software components, user agents can be parts of larger applications
+and can call libraries that implement the web platform or parts of it.
 
 When an application makes a clear distinction
 between its pieces that are [=user agents=] and its pieces that aren't,
