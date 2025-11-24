@@ -58,12 +58,61 @@ user agents choose which specifications to implement in order to best serve thei
 and they implement proprietary user interfaces and other behavior
 around the specifications they do implement.
 
+## User agents as software components ## {#ua-as-software}
+
+As software components, user agents can be parts of larger applications
+and can call libraries that implement the web platform or parts of it.
+
+When an application makes a clear distinction
+between its pieces that are [=user agents=] and its pieces that aren't,
+then only the [=user agent=] parts,
+which browse content from outside the user agent itself,
+need to follow the [=user agent duties=].
+Parts that are clearly only showing the application's own content
+can act on their own behalf,
+but the application should still
+give its users clear expectations about
+what behavior they should expect from different parts of the application.
+If the distinction between internal and external content is too small—for example
+if the application doesn't show an address bar
+or another indicator of content origin
+when browsing external content—then
+the application should also follow the [=user agent duties=]
+when showing its own content.
+
+Similarly a library that implements the web platform
+may or may not be a full [=user agent=].
+Some, like [`SFSafariViewController`](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller)
+and [Android Custom Tabs](https://developer.chrome.com/docs/android/custom-tabs)
+take on the responsibility of implementing the [=user agent duties=]
+and of clearly distinguishing between the external content they browse
+and the content controlled by the embedding application.
+These libraries are [=user agents=].
+
+Other libraries, like the
+[Android](https://developer.android.com/reference/android/webkit/WebView),
+[iOS](https://developer.apple.com/documentation/webkit/wkwebview),
+and [Windows](https://developer.microsoft.com/en-us/Microsoft-edge/webview2/)
+WebView libraries,
+are designed to support many kinds of applications.
+Because some of these applications include only their own content,
+WebView libraries are not meant to be [=user agents=] on their own,
+and they do not implement the [=user agent duties=].
+
+Ultimately, an embedding application is responsible for
+following the [=user agent duties=]
+if it, or any part of it, acts as a [=user agent=].
+This can be straightforward if the application only browses external content through a [=user agent=] library.
+Developers need to take extra care
+to follow the [=user agent duties=]
+when using a non-[=user agent=] WebView to implement an in-app browser .
 
 # Duties of user agents # {#duties}
 
 Each user agent serves its user ([[!RFC8890 inline]]),
 not any of the other constituencies.
-A user agent owes its user various duties,
+A user agent owes its user various
+<dfn lt="user agent duties|UA duties">duties</dfn>,
 which should be established through collective discussions
 and embodied in the various standards that user agents implement.
 
