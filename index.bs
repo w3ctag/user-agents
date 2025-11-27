@@ -6,6 +6,7 @@ Status: NOTE-ED
 Group: tag
 Repository: w3ctag/user-agents
 URL: https://w3ctag.github.io/user-agents
+TR: https://www.w3.org/TR/web-user-agents/
 Editor: Jeffrey Yasskin, w3cid 72192, Google https://google.com, jyasskin@google.com
 Editor: Sarven Capadisli, w3cid 46140, Invited Expert, https://csarven.ca/
 Complain About: accidental-2119 yes, missing-example-ids yes, mixed-indents no
