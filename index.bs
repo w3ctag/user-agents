@@ -146,7 +146,12 @@ A user agent may use multiple approaches for explanations, including
 text, permission prompts, indicators, previews, and other interface elements.
 Consider the placement of these elements and whether anything needs emphasis.
 See, for example, [Privacy Indicator Requirements](https://www.w3.org/TR/mediacapture-streams/#privacy-indicator-requirements)
-of the <cite>Media Capture and Streams</cite> specification.
+Some specifications, like
+the [[mediacapture-streams#privacy-indicator-requirements|Privacy Indicator Requirements]]
+in the [[mediacapture-streams inline]] specification,
+require user agents to explain some specific kinds of website behavior,
+but user agents should also use the same techniques when users need to know
+about other behavior, even if a specification doesn't specifically call out that behavior.
 
 An honest user agent actively works to present the truth to its user.
 It doesn't just avoid lies.
