@@ -36,7 +36,7 @@ This document is intended for:
 
 A <dfn lt="general user agent">user agent</dfn>, in general, is any software entity
 that interacts with other entities on behalf of its user.
-User agents include operating systems, email clients, PDF readers,
+User agents include many operating systems, email clients, PDF readers,
 wallet software, password managers, and many other kinds of software.
 
 <!-- TODO: Export this once it can replace the Infra definition. -->
