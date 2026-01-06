@@ -34,6 +34,11 @@ This document is intended for:
 
 # What is a web user agent # {#what}
 
+A <dfn lt="general user agent">user agent</dfn>, in general, is any software entity
+that interacts with other entities on behalf of its user.
+User agents include operating systems, email clients, PDF readers,
+wallet software, password managers, and many other kinds of software.
+
 <!-- TODO: Export this once it can replace the Infra definition. -->
 A <dfn lt="user agent|web user agent" noexport>web user agent</dfn> is
 any software entity that interacts with websites outside the entity itself,
@@ -41,8 +46,8 @@ on behalf of its user,
 including simply rendering the content of websites.
 In web specifications and the rest of this document,
 web user agents are usually referred to as just "[=user agents=]",
-but there are other kinds of user agents in other domains,
-for example "mail user agents" in the context of email.
+but the full term should be used
+if there's a chance of confusion with the [=general user agent|more general class=].
 A person can use many different user agents in their day-to-day life.
 
 The most common type of web user agent is the web browser,
