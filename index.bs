@@ -45,9 +45,9 @@ any software entity that interacts with websites outside the entity itself,
 on behalf of its user,
 including simply rendering the content of websites.
 In web specifications and the rest of this document,
-web user agents are usually referred to as just "[=user agents=]",
-but the full term should be used
-if there's a chance of confusion with the [=general user agent|more general class=].
+web user agents are usually referred to as just "[=user agents=]".
+Either fully-qualified term can be used
+if there's a chance of confusion.
 A person can use many different user agents in their day-to-day life.
 
 The most common type of web user agent is the web browser,
