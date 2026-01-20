@@ -6,6 +6,7 @@ Status: NOTE-ED
 Group: tag
 Repository: w3ctag/user-agents
 URL: https://w3ctag.github.io/user-agents
+TR: https://www.w3.org/TR/web-user-agents/
 Editor: Jeffrey Yasskin, w3cid 72192, Google https://google.com, jyasskin@google.com
 Editor: Sarven Capadisli, w3cid 46140, Invited Expert, https://csarven.ca/
 Complain About: accidental-2119 yes, missing-example-ids yes, mixed-indents no
@@ -22,16 +23,31 @@ Abstract: Web user agents include both web browsers and other intermediaries
 
 </pre>
 
+# Audience # {#audience}
+
+This document is intended for:
+
+* **Technical authors** who want to reuse or reference these concepts in their own specifications or documentation.
+* **User agent developers** who want to align implementations with design and privacy principles that prioritize their users.
+* **Web developers** who want to understand why user agents prioritize user privacy and security over other constituencies, including developer convenience.
+* **Regulators and policymakers** who seek to understand the duties, principles, and expectations guiding user agent behavior.
+
 # What is a web user agent # {#what}
 
-A <dfn lt="user agent|web user agent" export>web user agent</dfn> is
+A <dfn lt="general user agent">user agent</dfn>, in general, is any software entity
+that interacts with other entities on behalf of its user.
+User agents include many operating systems; email clients; PDF, ebook, and image viewers;
+[=credential managers=], including digital wallets; and many other kinds of software.
+
+<!-- TODO: Export this once it can replace the Infra definition. -->
+A <dfn lt="user agent|web user agent" noexport>web user agent</dfn> is
 any software entity that interacts with websites outside the entity itself,
 on behalf of its user,
-including just to display the content of websites.
+including simply rendering the content of websites.
 In web specifications and the rest of this document,
-web user agents are usually referred to as just "[=user agents=]",
-but there are other kinds of user agents in other domains,
-for example "mail user agents" in the context of email.
+web user agents are usually referred to as just "[=user agents=]".
+Either fully-qualified term can be used
+if there's a chance of confusion.
 A person can use many different user agents in their day-to-day life.
 
 The most common type of web user agent is the web browser,
@@ -48,30 +64,61 @@ user agents choose which specifications to implement in order to best serve thei
 and they implement proprietary user interfaces and other behavior
 around the specifications they do implement.
 
+## User agents as software components ## {#ua-as-software}
 
-# How the ecosystem works # {#ecosystem}
+As software components, user agents can be parts of larger applications
+and can call libraries that implement the web platform or parts of it.
 
-The structure of the web browser market helps ensure that browsers act as trustworthy agents,
-but it can also give them conflicts of interest.
-There are many browsers available for free,
-which allows users to switch away from a browser that violates their trust.
-Security and privacy researchers also actively investigate browser behavior
-and publicize any unexpected or user-hostile behavior,
-which helps users pick a browser and be confident that it's trustworthy.
-These researchers benefit from the parts of browsers that are open source.
+When an application makes a clear distinction
+between its pieces that are [=user agents=] and its pieces that aren't,
+then only the [=user agent=] parts,
+which browse content from outside the user agent itself,
+need to follow the [=user agent duties=].
+Parts that are clearly only showing the application's own content
+can act on their own behalf,
+but the application should still
+give its users clear expectations about
+what behavior they should expect from different parts of the application.
+If the distinction between internal and external content is too small—for example
+if the application doesn't show an address bar
+or another indicator of content origin
+when browsing external content—then
+the application should also follow the [=user agent duties=]
+when showing its own content.
 
-The trustworthiness of the available browsers is further aided
-by a culture of service to end-users among the people who develop browsers.
-However, we can't just assume that culture will sustain itself:
-it's important that browsers which lose that culture also lose in the marketplace,
-fast enough to prevent the culture-loss from spreading.
+Similarly a library that implements the web platform
+may or may not be a full [=user agent=].
+Some, like [`SFSafariViewController`](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller)
+and [Android Custom Tabs](https://developer.chrome.com/docs/android/custom-tabs)
+take on the responsibility of implementing the [=user agent duties=]
+and of clearly distinguishing between the external content they browse
+and the content controlled by the embedding application.
+These libraries are [=user agents=].
 
+Other libraries, like the
+[Android](https://developer.android.com/reference/android/webkit/WebView),
+[iOS](https://developer.apple.com/documentation/webkit/wkwebview),
+and [Windows](https://developer.microsoft.com/en-us/Microsoft-edge/webview2/)
+WebView libraries,
+are designed to support many kinds of applications.
+Because some of these applications include only their own content,
+WebView libraries are not meant to be [=user agents=] on their own,
+and they do not implement the [=user agent duties=].
+
+Ultimately, an embedding application is responsible for
+following the [=user agent duties=]
+if it, or any part of it, acts as a [=user agent=].
+This can be straightforward if the application only browses external content through a [=user agent=] library.
+Developers need to take extra care
+to follow the [=user agent duties=]
+when using a non-[=user agent=] WebView to implement an in-app browser .
 
 # Duties of user agents # {#duties}
 
 Each user agent serves its user ([[!RFC8890 inline]]),
 not any of the other constituencies.
-A user agent owes its user various duties,
+A user agent owes its user various
+<dfn lt="user agent duties|UA duties">duties</dfn>,
 which should be established through collective discussions
 and embodied in the various standards that user agents implement.
 
@@ -121,9 +168,10 @@ so it's not a violation.
 
 <div class="example" id="example-protection-local-files" heading="Local Files">
 
-User agents are expected prevent pages from accessing local files
+User agents are expected to prevent pages from accessing local files
 unless the user explicitly selects or opens one.
-This motivates behaviors like
+This motivates behaviors like:
+
 * giving each `file:` URL its own [=url/origin=],
 * removing path components from
     <a element-state for="input" lt="File Upload">`<input type=file>`</a> uploads, and
@@ -132,7 +180,7 @@ This motivates behaviors like
 However, users can still choose to share files,
 e.g., via uploads or downloads.
 APIs like [[file-system-access inline]] don’t violate this duty,
-provided users can [[design-principles#consent|meaningfully consent]].
+provided users have the tools to [[design-principles#user-decisions|make good decisions]].
 
 </div>
 
@@ -181,6 +229,11 @@ A user agent can also help its user
 make a credible commitment to a page in order to get that page's services,
 and it's not disloyal to maintain that commitment after getting the services.
 
+A user agent must not obstruct its users from switching to another user agent.
+For example, it must not block access to, export, or store user data in ways that prevent portability.
+This includes identity information, bookmarks, history, passwords, and credentials such as passkeys.
+If the user agent relies on the underlying <abbr title="Operating System">OS</abbr> to store credentials,
+there needs to be a way for users to allow other user agents to access those credentials.
 
 <section class="non-normative">
 
