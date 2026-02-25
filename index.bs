@@ -141,6 +141,9 @@ such as by filling out forms or granting permissions.
 Even then, user agents must help users avoid deception and
 clearly signal when a page attempts to gain elevated access.
 
+And user agents should differentiate permissions precisely and
+avoid recommending the grant of multiple permissions at once (since users typically agree).
+
 Access to local files or other sensitive resources
 must be limited to clear, intentional user actions, with appropriate warnings.
 
@@ -149,6 +152,11 @@ must be limited to clear, intentional user actions, with appropriate warnings.
 User agents need to prevent malicious code on a site from
 being able to escape the user agent
 to modify the user’s computer or access other [=origins=].
+
+User agents should either block the access, warn the users, or 
+require user confirmation when users access risky pages. 
+User agents can maintain an up-to-date list of potentially risky pages.
+
 User agents meet this duty of protection by sandboxing components,
 using memory-safe languages,
 and employing security teams to find and respond to vulnerabilities.
@@ -194,6 +202,9 @@ A user agent may use multiple approaches for explanations, including
 text, permission prompts, indicators, previews, and other interface elements.
 Consider the placement of these elements and whether anything needs emphasis.
 
+In the case of non‑fullscreen embedded web‑views (e.g., cards in conversation flow), 
+the corresponding interface elements should also be adapted specifically.
+
 A quintessential example is user agents indicating if a website was served over an encrypted connection.
 This has evolved over time, from insecure sites being shown with a broken lock icon,
 to some user agents explicitly including the text "not secure" in the URL bar.
@@ -214,6 +225,11 @@ and make it obvious when sensitive activity is occurring.
 The user agent should choose when and how often to show these explanations,
 so explanations arrive when helpful and inform rather than distract.
 The user agent should ensure the user can control if and when they make a decision.
+
+For permission granting behaviors related to continuous capabilities, 
+the user agent should inform users during the continuous operation period of the corresponding capabilities 
+(such as continuous geolocation or continuous audio recording) through dynamic-style icons. 
+This ensures users are always aware of which capabilities are continuously operating, enhancing system transparency.
 
 ## Loyalty ## {#loyalty}
 
