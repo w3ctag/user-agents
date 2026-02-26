@@ -215,6 +215,11 @@ The user agent should choose when and how often to show these explanations,
 so explanations arrive when helpful and inform rather than distract.
 The user agent should ensure the user can control if and when they make a decision.
 
+For permission granting behaviors related to continuous capabilities, 
+the user agent should inform users during the continuous operation period of the corresponding capabilities 
+(such as continuous geolocation or continuous audio recording) through dynamic-style icons. 
+This ensures users are always aware of which capabilities are continuously operating, enhancing system transparency.
+
 ## Loyalty ## {#loyalty}
 
 A user agent must serve its user's interests
