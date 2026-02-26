@@ -149,6 +149,11 @@ must be limited to clear, intentional user actions, with appropriate warnings.
 User agents need to prevent malicious code on a site from
 being able to escape the user agent
 to modify the user’s computer or access other [=origins=].
+
+User agents should either block the access, warn the users, or 
+require user confirmation when users access risky pages. 
+User agents can maintain an up-to-date list of potentially risky pages.
+
 User agents meet this duty of protection by sandboxing components,
 using memory-safe languages,
 and employing security teams to find and respond to vulnerabilities.
