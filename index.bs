@@ -141,6 +141,9 @@ such as by filling out forms or granting permissions.
 Even then, user agents must help users avoid deception and
 clearly signal when a page attempts to gain elevated access.
 
+And user agents should differentiate permissions precisely and
+avoid recommending the grant of multiple permissions at once (since users typically agree).
+
 Access to local files or other sensitive resources
 must be limited to clear, intentional user actions, with appropriate warnings.
 
