@@ -43,7 +43,7 @@ User agents include many operating systems; email clients; PDF, ebook, and image
 A <dfn lt="user agent|web user agent" noexport>web user agent</dfn> is
 any software entity that interacts with websites outside the entity itself,
 on behalf of its user,
-including simply rendering the content of websites.
+including simply rendering the content of websites or performing actions requested or authorized by the user.
 In web specifications and the rest of this document,
 web user agents are usually referred to as just "[=user agents=]".
 Either fully-qualified term can be used
@@ -54,8 +54,7 @@ The most common type of web user agent is the web browser,
 including in-app browsers that can follow cross-site links.
 However, user agents also include other tools like
 search engines, voice-driven assistants, and generative AI systems
-that present snippets or summaries of website content,
-or help people navigate and interact with websites.
+that present snippets or summaries of website content, help people navigate and interact with websites, or perform limited automated actions on the user’s behalf when authorized by the user.
 
 User agent behavior is not completely defined by web standards
 or even by technical specifications in general.
@@ -188,7 +187,8 @@ provided users have the tools to [[design-principles#user-decisions|make good de
 ## Honesty ## {#honesty}
 
 A user agent must mediate between the Web and its user,
-explaining what is happening in a form the user can understand.
+explaining what is happening in a form the user can understand. 
+When the user agent performs actions automatically or on behalf of the user, it must clearly communicate those actions and their consequences.
 
 A user agent may use multiple approaches for explanations, including
 text, permission prompts, indicators, previews, and other interface elements.
