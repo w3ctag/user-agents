@@ -215,6 +215,9 @@ The user agent should choose when and how often to show these explanations,
 so explanations arrive when helpful and inform rather than distract.
 The user agent should ensure the user can control if and when they make a decision.
 
+For example, if a website is using a long-lived permission like geolocation or audio recording, 
+the user agent can explain what's happening by showing an indicator icon in the URL bar.
+
 ## Loyalty ## {#loyalty}
 
 A user agent must serve its user's interests
