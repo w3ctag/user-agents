@@ -54,7 +54,9 @@ The most common type of web user agent is the web browser,
 including in-app browsers that can follow cross-site links.
 However, user agents also include other tools like
 search engines, voice-driven assistants, and generative AI systems
-that present snippets or summaries of website content, help people navigate and interact with websites, or perform limited automated actions on the user’s behalf when authorized by the user.
+that present snippets or summaries of website content,
+help people navigate and interact with websites,
+or perform automated actions on the user’s behalf.
 
 User agent behavior is not completely defined by web standards
 or even by technical specifications in general.
