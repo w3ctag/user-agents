@@ -142,8 +142,12 @@ such as by filling out forms or granting permissions.
 Even then, user agents must help users avoid deception and
 clearly signal when a page attempts to gain elevated access.
 
-Access to local files or other sensitive resources
-must be limited to clear, intentional user actions, with appropriate warnings.
+User agents should require a description of each permission request
+to inform users of the actual purpose for which the page uses the permission.
+
+If a page requests multiple permissions at once, 
+the user agent needs to provide grant/deny adjustment options 
+for each permission to prevent unintended granting.
 
 <div class="example" id="example-protection-exploits" heading="Attacks">
 
