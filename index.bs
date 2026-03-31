@@ -196,6 +196,9 @@ A user agent may use multiple approaches for explanations, including
 text, permission prompts, indicators, previews, and other interface elements.
 Consider the placement of these elements and whether anything needs emphasis.
 
+In the case of non‑fullscreen embedded web‑views (e.g., cards in conversation flow), 
+the corresponding interface elements should also be adapted specifically.
+
 A quintessential example is user agents indicating if a website was served over an encrypted connection.
 This has evolved over time, from insecure sites being shown with a broken lock icon,
 to some user agents explicitly including the text "not secure" in the URL bar.
