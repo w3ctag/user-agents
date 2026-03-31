@@ -185,6 +185,13 @@ provided users have the tools to [[design-principles#user-decisions|make good de
 
 </div>
 
+<div class="example" id="example-avoid-risky-pages" heading="Risky Pages">
+
+User agents should either block the access, warn the users, or 
+require user confirmation when users access risky pages. 
+User agents can maintain an up-to-date list of potentially risky pages.
+
+</div>
 
 ## Honesty ## {#honesty}
 
