@@ -186,9 +186,10 @@ provided users have the tools to [[design-principles#user-decisions|make good de
 
 <div class="example" id="example-avoid-risky-pages" heading="Risky Pages">
 
-User agents should either block the access, warn the users, or 
-require user confirmation when users access risky pages. 
-User agents can maintain an up-to-date list of potentially risky pages.
+User agents should attempt to identify pages that attack their visitors.
+When a user starts visiting such a page, 
+the user agent should attempt to prevent the harm,
+for example by blocking the access or warning the user.
 
 </div>
 
