@@ -8,7 +8,7 @@
   <meta content="Bikeshed version d113b2e81, updated Tue Jun 9 14:57:55 2026 -0700" name="generator">
   <link href="https://www.w3.org/TR/web-user-agents/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="012b8735e3dc1a55bb843043ec709921d79b549f" name="revision">
+  <meta content="0f901f954477d85caeeafd3a396142f6b7d84400" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -581,7 +581,7 @@ dfn > a.self-link::before      { content: "#"; }
 </p>
    <h1 class="no-ref p-name" id="title">Web User Agents</h1>
    <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>,
-    <time class="dt-updated" datetime="2026-07-08">8 July 2026</time></p>
+    <time class="dt-updated" datetime="2026-07-15">15 July 2026</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -784,8 +784,10 @@ limit the potential for sites to track user activity <a data-link-type="biblio" 
 such as by filling out forms or granting permissions.
 Even then, user agents must help users avoid deception and
 clearly signal when a page attempts to gain elevated access.</p>
-   <p>Access to local files or other sensitive resources
-must be limited to clear, intentional user actions, with appropriate warnings.</p>
+   <p>If a page requests multiple permissions at once, it must be initiated by
+user activation and the user agent needs to ensure both that the user can 
+grant a subset of the requested permissions, and that they are aware of 
+the full set that they are granting.</p>
    <div class="example no-marker" id="example-protection-exploits">
     <a class="self-link" href="#example-protection-exploits"></a>
     <div class="marker">EXAMPLE: Attacks</div>
