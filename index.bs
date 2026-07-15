@@ -43,7 +43,7 @@ User agents include many operating systems; email clients; PDF, ebook, and image
 A <dfn lt="user agent|web user agent" noexport>web user agent</dfn> is
 any software entity that interacts with websites outside the entity itself,
 on behalf of its user,
-including simply rendering the content of websites.
+including simply rendering the content of websites or performing actions requested or authorized by the user.
 In web specifications and the rest of this document,
 web user agents are usually referred to as just "[=user agents=]".
 Either fully-qualified term can be used
@@ -55,7 +55,8 @@ including in-app browsers that can follow cross-site links.
 However, user agents also include other tools like
 search engines, voice-driven assistants, and generative AI systems
 that present snippets or summaries of website content,
-or help people navigate and interact with websites.
+help people navigate and interact with websites,
+or perform automated actions on the user’s behalf.
 
 User agent behavior is not completely defined by web standards
 or even by technical specifications in general.
@@ -186,11 +187,20 @@ provided users have the tools to [[design-principles#user-decisions|make good de
 
 </div>
 
+<div class="example" id="example-avoid-risky-pages" heading="Risky Pages">
+
+User agents should attempt to identify pages that attack their visitors.
+When a user starts visiting such a page, 
+the user agent should attempt to prevent the harm,
+for example by blocking the access or warning the user.
+
+</div>
 
 ## Honesty ## {#honesty}
 
 A user agent must mediate between the Web and its user,
-explaining what is happening in a form the user can understand.
+explaining what is happening in a form the user can understand. 
+When the user agent performs actions automatically or on behalf of the user, it must clearly communicate those actions and their consequences.
 
 A user agent may use multiple approaches for explanations, including
 text, permission prompts, indicators, previews, and other interface elements.
@@ -216,6 +226,9 @@ and make it obvious when sensitive activity is occurring.
 The user agent should choose when and how often to show these explanations,
 so explanations arrive when helpful and inform rather than distract.
 The user agent should ensure the user can control if and when they make a decision.
+
+For example, if a website is using a long-lived permission like geolocation or audio recording, 
+the user agent can explain what's happening by showing an indicator icon in the URL bar.
 
 ## Loyalty ## {#loyalty}
 
