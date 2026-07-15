@@ -141,6 +141,11 @@ such as by filling out forms or granting permissions.
 Even then, user agents must help users avoid deception and
 clearly signal when a page attempts to gain elevated access.
 
+If a page requests multiple permissions at once, it must be initiated by 
+user activation and the user agent needs to ensure both that the user can 
+grant a subset of the requested permissions, and that they are aware of 
+the full set that they are granting.
+
 <div class="example" id="example-protection-exploits" heading="Attacks">
 
 User agents need to prevent malicious code on a site from
