@@ -42,7 +42,7 @@ Rather than standing alone as requirements,
 these duties are meant to be established through community discussion
 and embodied in the standards that user agents implement.
 
-This document is intended for: {#audience}
+<p id="audience">This document is intended for:</p>
 
 * **Technical authors** who want to reuse or reference these concepts in their own specifications or documentation.
 * **User agent developers** who want to align implementations with design and privacy principles that prioritize their users.
