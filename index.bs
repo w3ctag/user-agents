@@ -29,14 +29,13 @@ People experience the web through user agents:
 software that retrieves, presents, and acts on web content
 on behalf of the person using it.
 The web browser is the most familiar example,
-but a growing variety of other software plays the same role.
-The word "agent" is not incidental.
+but a variety of other software plays the same role.
+The word "agent" is not incidental:
 A user agent works for its user,
 and when the user's interests conflict with another party's,
-it serves the user first ([[RFC8890]]).
+it <a href="RFC8890">serves the user first</a>.
 
-This document describes what makes software a user agent,
-how that role applies to applications and the libraries they embed,
+This document describes what classifies software a "user agent",
 and the duties a user agent owes its user:
 protection, honesty, and loyalty.
 Rather than standing alone as requirements,
