@@ -23,9 +23,27 @@ Abstract: Web user agents include both web browsers and other intermediaries
 
 </pre>
 
-# Audience # {#audience}
+# Introduction # {#introduction}
 
-This document is intended for:
+People experience the web through user agents:
+software that retrieves, presents, and acts on web content
+on behalf of the person using it.
+The web browser is the most familiar example,
+but a growing variety of other software plays the same role.
+The word "agent" is not incidental.
+A user agent works for its user,
+and when the user's interests conflict with another party's,
+it serves the user first ([[RFC8890]]).
+
+This document describes what makes software a user agent,
+how that role applies to applications and the libraries they embed,
+and the duties a user agent owes its user:
+protection, honesty, and loyalty.
+Rather than standing alone as requirements,
+these duties are meant to be established through community discussion
+and embodied in the standards that user agents implement.
+
+This document is intended for: {#audience}
 
 * **Technical authors** who want to reuse or reference these concepts in their own specifications or documentation.
 * **User agent developers** who want to align implementations with design and privacy principles that prioritize their users.
