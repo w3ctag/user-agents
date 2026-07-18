@@ -189,9 +189,9 @@ provided users have the tools to [[design-principles#user-decisions|make good de
 
 <div class="example" id="example-avoid-risky-pages" heading="Risky Pages">
 
-User agents should attempt to identify pages that attack their visitors.
+User agents are expected to attempt to identify pages that attack their visitors.
 When a user starts visiting such a page, 
-the user agent should attempt to prevent the harm,
+the user agent might attempt to prevent the harm,
 for example by blocking the access or warning the user.
 
 </div>
