@@ -247,6 +247,15 @@ The user agent should ensure the user can control if and when they make a decisi
 For example, if a website is using a long-lived permission like geolocation or audio recording, 
 the user agent can explain what's happening by showing an indicator icon in the URL bar.
 
+<div class="example" id="example-honesty-defaults" heading="Clear Communication">
+
+A user agent which convinces users to provide account information to the browser 
+(and not a specific site), but then quietly defaults to using that information for
+other purposes like tracking or ad targeting is not acting honestly.  A user 
+agent needs to clearly communicate where there are tradeoffs.
+
+</div>
+
 ## Loyalty ## {#loyalty}
 
 A user agent must serve its user's interests
