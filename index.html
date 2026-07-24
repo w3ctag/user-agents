@@ -8,7 +8,7 @@
   <meta content="Bikeshed version d113b2e81, updated Tue Jun 9 14:57:55 2026 -0700" name="generator">
   <link href="https://www.w3.org/TR/web-user-agents/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="071c036fc0a915d2fdd07116586f34bf0db56b30" name="revision">
+  <meta content="f205b87f0392ebfafb173701b4ee91d0321dca54" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -581,7 +581,7 @@ dfn > a.self-link::before      { content: "#"; }
 </p>
    <h1 class="no-ref p-name" id="title">Web User Agents</h1>
    <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>,
-    <time class="dt-updated" datetime="2026-07-20">20 July 2026</time></p>
+    <time class="dt-updated" datetime="2026-07-24">24 July 2026</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -876,6 +876,14 @@ so explanations arrive when helpful and inform rather than distract.
 The user agent should ensure the user can control if and when they make a decision.</p>
    <p>For example, if a website is using a long-lived permission like geolocation or audio recording,
 the user agent can explain what’s happening by showing an indicator icon in the URL bar.</p>
+   <div class="example no-marker" id="example-honesty-defaults">
+    <a class="self-link" href="#example-honesty-defaults"></a>
+    <div class="marker">EXAMPLE: Clear Communication</div>
+    <p>A user agent which convinces users to provide account information to the browser
+(and not a specific site), but then quietly defaults to using that information for
+other purposes like tracking or ad targeting is not acting honestly.  A user 
+agent needs to clearly communicate where there are tradeoffs.</p>
+   </div>
    <h3 class="heading settled" data-level="3.3" id="loyalty"><span class="secno">3.3. </span><span class="content">Loyalty</span><a class="self-link" href="#loyalty"></a></h3>
    <p>A user agent must serve its user’s interests
 over its implementer’s interests
