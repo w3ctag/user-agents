@@ -232,11 +232,10 @@ the user agent can explain what's happening by showing an indicator icon in the 
 
 <div class="example" id="example-honesty-defaults" heading="Clear Communication">
 
-A user agent which offers its users features that allow it to provide information 
-to the browser itself, but then quietly default to using the same information for 
-other purposes like tracking or ad targeting is not acting honestly.  
-
-A user agent must clearly communicate where there are tradeoffs.
+A user agent which convinces users to provide account information to the browser 
+(and not a specific site), but then quietly defaults to using that information for
+other purposes like tracking or ad targeting is not acting honestly.  A user 
+agent needs to clearly communicate where there are tradeoffs.
 
 </div>
 
