@@ -262,9 +262,12 @@ A user agent must serve its user's interests
 over its implementer's interests
 and over the interests of any other party.
 
-A user agent can be loyal
-while also collecting payment for its services,
-as long as that payment is fair and was agreed ahead of time.
+A user agent can collect payment for its services
+without compromising its loyalty.
+Collecting payment does not change to whom the duty of loyalty is owed,
+even when the user accepted the arrangement passively,
+for example a pre-installed default:
+its loyalty remains with its user rather than with any paying party.
 
 A user agent can also help its user
 make a credible commitment to a page in order to get that page's services,
