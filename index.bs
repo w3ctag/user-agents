@@ -267,7 +267,7 @@ without compromising its loyalty.
 Collecting payment does not change to whom the duty of loyalty is owed,
 even when the user accepted the arrangement passively,
 for example a pre-installed default:
-its loyalty remains with its user rather than with any paying party.
+its loyalty is owed to the user rather than with any paying party.
 
 A user agent can also help its user
 make a credible commitment to a page in order to get that page's services,
