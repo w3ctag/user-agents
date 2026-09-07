@@ -8,7 +8,7 @@
   <meta content="Bikeshed version ac92c2f0d, updated Fri Aug 21 16:01:29 2026 -0700" name="generator">
   <link href="https://www.w3.org/TR/web-user-agents/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="6e62f2b5f0200f0f0d5bbc56886d4e9264bdb2e4" name="revision">
+  <meta content="540b0bf74c5f12b8097673733bee8545e5f41794" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -690,8 +690,8 @@ but a variety of other software plays the same role.
 The word "agent" is not incidental:
 A user agent works for its user,
 and when the user’s interests conflict with another party’s,
-it <a href="RFC8890">serves the user first</a>.</p>
-   <p>This document describes what classifies software a "user agent",
+it <a data-link-type="biblio" href="#biblio-rfc8890" title="The Internet is for End Users">serves the user first</a>.</p>
+   <p>This document describes what makes software a "user agent",
 and the duties a user agent owes its user:
 protection, honesty, and loyalty.
 Rather than standing alone as requirements,
@@ -776,7 +776,7 @@ if it, or any part of it, acts as a <a data-link-type="dfn" href="#user-agent" i
 This can be straightforward if the application only browses external content through a <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent⑦">user agent</a> library.
 Developers need to take extra care
 to follow the <a data-link-type="dfn" href="#user-agent-duties" id="ref-for-user-agent-duties⑤">user agent duties</a>
-when using a non-<a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent⑧">user agent</a> WebView to implement an in-app browser .</p>
+when using a non-<a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent⑧">user agent</a> WebView to implement an in-app browser.</p>
    <h2 class="heading settled" data-level="3" id="duties"><span class="secno">3. </span><span class="content">Duties of user agents</span><a class="self-link" href="#duties"></a></h2>
    <p>Each user agent serves its user (<a data-biblio-display="inline" data-link-type="biblio" href="https://www.rfc-editor.org/info/rfc8890/"><cite>The Internet is for End Users</cite></a>),
 not any of the other constituencies.
@@ -895,7 +895,7 @@ the user agent can explain what’s happening by showing an indicator icon in th
    <div class="example no-marker" id="example-honesty-defaults">
     <a class="self-link" href="#example-honesty-defaults"></a>
     <div class="marker">EXAMPLE: Clear Communication</div>
-    <p>A user agent which convinces users to provide account information to the browser
+    <p>A user agent that convinces users to provide account information to the browser
 (and not a specific site), but then quietly defaults to using that information for
 other purposes like tracking or ad targeting is not acting honestly.  A user
 agent needs to clearly communicate where there are tradeoffs.</p>
