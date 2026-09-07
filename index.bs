@@ -56,7 +56,7 @@ that interacts with other entities on behalf of its user.
 User agents include many operating systems; email clients; PDF, ebook, and image viewers;
 [=credential managers=], including digital wallets; and many other kinds of software.
 
-<!-- TODO: Export this once it can replace the Infra definition. -->
+<!-- Note that this definition needs to be kept in sync with the Infra spec. -->
 A <dfn lt="user agent|web user agent" noexport>web user agent</dfn> is
 any software entity that interacts with websites outside the entity itself,
 on behalf of its user,
