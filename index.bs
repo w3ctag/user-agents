@@ -286,8 +286,13 @@ for example a pre-installed default:
 its loyalty is owed to the user rather than with any paying party.
 
 A user agent can also help its user
-make a credible commitment to a page in order to get that page's services,
+make a credible commitment to a page,
+a deliberate restriction on the user's future options
+that the page requires before providing its services,
 and it's not disloyal to maintain that commitment after getting the services.
+A loyal commitment constrains only the use of those services,
+not the user's other data, settings, or choices.
+The user remains able to abandon the service and clear their data.
 
 A user agent does not obstruct its users from switching to another user agent.
 
