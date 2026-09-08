@@ -221,7 +221,7 @@ for example by blocking the access or warning the user.
 
 A user agent mediates between the Web and its user,
 explaining what is happening in a form the user can understand.
-When the user agent performs actions automatically or on behalf of the user, it clearly communicates those actions and their consequences.
+When the user agent performs actions automatically or on behalf of the user, it clearly communicates those actions and their consequences. When a user agent transforms content or takes actions on a user’s behalf in ways the user cannot readily observe, it should provide meaningful visibility into the sources it relied on, the actions it took, and the outcomes of those actions.
 
 A user agent can use multiple approaches for explanations, including
 text, permission prompts, indicators, previews, and other interface elements.
