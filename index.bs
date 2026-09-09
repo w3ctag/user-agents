@@ -78,9 +78,11 @@ or perform automated actions on the user’s behalf.
 User agent behavior is not completely defined by web standards
 or even by technical specifications in general.
 In particular,
-user agents choose which specifications to implement in order to best serve their users,
-and they implement proprietary user interfaces and other behavior
-around the specifications they do implement.
+user agents choose which features to implement,
+and how much of each to expose,
+in order to best serve their users.
+They also build user interfaces and other behavior
+that no specification describes.
 
 ## User agents as software components ## {#ua-as-software}
 
