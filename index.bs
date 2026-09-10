@@ -292,7 +292,8 @@ that the page requires before providing its services,
 and it's not disloyal to maintain that commitment after getting the services.
 A loyal commitment constrains only the use of those services,
 not the user's other data, settings, or choices.
-The user remains able to abandon the service and clear their data.
+The user remains able to abandon the service and clear their data,
+with no further consequences.
 
 A user agent does not obstruct its users from switching to another user agent.
 
