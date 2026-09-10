@@ -33,9 +33,9 @@ but a variety of other software plays the same role.
 The word "agent" is not incidental:
 A user agent works for its user,
 and when the user's interests conflict with another party's,
-it <a href="RFC8890">serves the user first</a>.
+it [[RFC8890|serves the user first]].
 
-This document describes what classifies software a "user agent",
+This document describes what makes software a "user agent",
 and the duties a user agent owes its user:
 protection, honesty, and loyalty.
 Rather than standing alone as requirements,
@@ -129,7 +129,7 @@ if it, or any part of it, acts as a [=user agent=].
 This can be straightforward if the application only browses external content through a [=user agent=] library.
 Developers need to take extra care
 to follow the [=user agent duties=]
-when using a non-[=user agent=] WebView to implement an in-app browser .
+when using a non-[=user agent=] WebView to implement an in-app browser.
 
 # Duties of user agents # {#duties}
 
@@ -221,7 +221,7 @@ for example by blocking the access or warning the user.
 
 A user agent mediates between the Web and its user,
 explaining what is happening in a form the user can understand.
-When the user agent performs actions automatically or on behalf of the user, it clearly communicates those actions and their consequences.
+When the user agent performs actions automatically or on behalf of the user, it clearly communicates those actions and their consequences. When a user agent transforms content or takes actions on a user’s behalf in ways the user cannot readily observe, it should provide meaningful visibility into the sources it relied on, the actions it took, and the outcomes of those actions.
 
 A user agent can use multiple approaches for explanations, including
 text, permission prompts, indicators, previews, and other interface elements.
@@ -265,7 +265,7 @@ the user agent can explain what's happening by showing an indicator icon in the 
 
 <div class="example" id="example-honesty-defaults" heading="Clear Communication">
 
-A user agent which convinces users to provide account information to the browser
+A user agent that convinces users to provide account information to the browser
 (and not a specific site), but then quietly defaults to using that information for
 other purposes like tracking or ad targeting is not acting honestly.  A user
 agent needs to clearly communicate where there are tradeoffs.
