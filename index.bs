@@ -1,5 +1,5 @@
 <pre class='metadata'>
-Title: Web User Agents
+Title: User Agents
 Shortname: web-user-agents
 Level: none
 Status: NOTE-ED
@@ -13,7 +13,7 @@ Complain About: accidental-2119 yes, missing-example-ids yes, mixed-indents no
 Markup Shorthands: markdown yes, css no
 Assume Explicit For: yes
 Boilerplate: conformance no
-Abstract: Web user agents include both web browsers and other intermediaries
+Abstract: User agents include both web browsers and other intermediaries
     between end-users and the web.
     Each user agent serves its user,
     not any of the other constituencies.
@@ -49,25 +49,30 @@ and embodied in the standards that user agents implement.
 * **Web developers** who want to understand why user agents prioritize user privacy and security over other constituencies, including developer convenience.
 * **Regulators and policymakers** who seek to understand the duties, principles, and expectations guiding user agent behavior.
 
-# What is a web user agent # {#what}
-
-A <dfn lt="general user agent">user agent</dfn>, in general, is any software entity
-that interacts with other entities on behalf of its user.
-User agents include many operating systems; email clients; PDF, ebook, and image viewers;
-[=credential managers=], including digital wallets; and many other kinds of software.
+# What is a user agent # {#what}
 
 <!-- Note that this definition needs to be kept in sync with the Infra spec. -->
-A <dfn lt="user agent|web user agent" noexport>web user agent</dfn> is
+A <dfn noexport>user agent</dfn> is
 any software entity that interacts with websites outside the entity itself,
 on behalf of its user,
 including simply rendering the content of websites or performing actions requested or authorized by the user.
-In web specifications and the rest of this document,
-web user agents are usually referred to as just "[=user agents=]".
-Either fully-qualified term can be used
-if there's a chance of confusion.
 A person can use many different user agents in their day-to-day life.
 
-The most common type of web user agent is the web browser —
+<div class=note>
+
+Other fields also use the term "user agent" to refer to software entities
+that help users accomplish tasks.
+Email clients, especially,
+have been called "mail user agents" since at least the late 1980s. [[RFC1123]]
+Operating systems; PDF, ebook, and image viewers;
+[=credential managers=], including digital wallets; and many other kinds of software
+can also be referred to as "user agents".
+However, when this document and web specifications use the term,
+they're specifically referring to software that interacts with websites on users' behalf.
+
+</div>
+
+The most common type of user agent is the web browser —
 including in-app browsers that can follow cross-site links ([[evergreen-web#updates|any product that can load arbitrary content is a web browser]]).
 However, user agents also include other tools like
 search engines, voice-driven assistants, and generative AI systems
