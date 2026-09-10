@@ -294,18 +294,24 @@ and it's not disloyal to maintain that commitment after getting the services.
 
 Many of the people who own the copyright to music and movies
 were only willing to let people watch or listen to them over the web
-if those people could credibly commit not to make extra copies.
-If audience members received a simple digital file to watch,
-it would be easy for someone to break a promise not to copy the file.
-As a result, the W3C developed [[encrypted-media inline snapshot]]
-to make it difficult for an audience member to copy the file after promising not to.
+if audiences could credibly commit not to make extra copies.
+A promise alone is not credible:
+with a simple digital file, nothing prevents copying.
+As a result, the W3C developed [[encrypted-media inline snapshot]],
+and user agents maintain the commitment on their users' behalf
+by making copying difficult by construction.
+No individual user promises anything.
+The commitment is part of a standardized bargain,
+scoped to the protected media
+and balanced with requirements such as sandboxing the content decryption module.
 
 It might seem like a violation of the [[#loyalty|loyalty duty]] that
 a user agent would refuse to help its user copy the file after receiving it.
-However, the user has an interest in committing to the media owner
-that they won't copy the media,
-in order to receive that media in the first place,
-and the user agent is loyally serving that interest.
+However, the commitment constrains only the media the user chose to receive,
+not the user's other data, settings, or choices,
+and without it the media would not have been available on the web at all.
+Maintaining it serves the user's interest
+in being able to get the media in the first place.
 
 </div>
 
