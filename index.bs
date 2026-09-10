@@ -289,6 +289,32 @@ A user agent can also help its user
 make a credible commitment to a page in order to get that page's services,
 and it's not disloyal to maintain that commitment after getting the services.
 
+<div class="example" id="example-eme"
+     heading="Encrypted Media Extensions as a commitment device">
+
+Many of the people who own the copyright to music and movies
+were only willing to let people watch or listen to them over the web
+if audiences could credibly commit not to make extra copies.
+A promise alone is not credible:
+with a simple digital file, nothing prevents copying.
+As a result, the W3C developed [[encrypted-media inline snapshot]],
+and user agents maintain the commitment on their users' behalf
+by making copying difficult by construction.
+No individual user promises anything.
+The commitment is part of a standardized bargain,
+scoped to the protected media
+and balanced with requirements such as sandboxing the content decryption module.
+
+It might seem like a violation of the [[#loyalty|loyalty duty]] that
+a user agent would refuse to help its user copy the file after receiving it.
+However, the commitment constrains only the media the user chose to receive,
+not the user's other data, settings, or choices,
+and without it the media would not have been available on the web at all.
+Maintaining it serves the user's interest
+in being able to get the media in the first place.
+
+</div>
+
 A user agent does not obstruct its users from switching to another user agent.
 
 <div class="example" id="example-loyalty-portability" heading="Data Portability">
