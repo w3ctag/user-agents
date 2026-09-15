@@ -60,7 +60,7 @@ A person can use many different user agents in their day-to-day life.
 
 <div class=note>
 
-Other fields also use the term "user agent" to refer to software entities
+In other contexts, the term "user agent" is used to refer to software entities
 that help users accomplish tasks.
 Email clients, especially,
 have been called "mail user agents" since at least the late 1980s. [[RFC1123]]
