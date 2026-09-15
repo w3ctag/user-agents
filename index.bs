@@ -68,7 +68,7 @@ Operating systems; PDF, ebook, and image viewers;
 [=credential managers=], including digital wallets; and many other kinds of software
 can also be referred to as "user agents".
 However, when this document and web specifications use the term,
-they're specifically referring to software that interacts with websites on users' behalf.
+they specifically refer to software that interacts with websites on users' behalf.
 
 </div>
 
