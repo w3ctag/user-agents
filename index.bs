@@ -66,7 +66,7 @@ Email clients, especially,
 have been called "mail user agents" since at least the late 1980s. [[RFC1123]]
 Operating systems; PDF, ebook, and image viewers;
 [=credential managers=], including digital wallets; and many other kinds of software
-can also be referred to as "user agents".
+can also be thought of as user agents.
 However, when this document and web specifications use the term,
 they specifically refer to software that interacts with websites on users' behalf.
 
