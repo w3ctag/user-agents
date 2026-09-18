@@ -72,7 +72,8 @@ they specifically refer to software that interacts with websites on users' behal
 
 </div>
 
-The most common type of user agent is the web browser —
+In the context of the web,
+the most common type of user agent is the web browser —
 including in-app browsers that can follow cross-site links ([[evergreen-web#updates|any product that can load arbitrary content is a web browser]]).
 However, user agents also include other tools like
 search engines, voice-driven assistants, and generative AI systems
