@@ -5,10 +5,10 @@
   <title>Web User Agents</title>
   <meta content="NOTE-ED" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED" rel="stylesheet">
-  <meta content="Bikeshed version ac92c2f0d, updated Fri Aug 21 16:01:29 2026 -0700" name="generator">
+  <meta content="Bikeshed version ea4009a02, updated Thu Sep 17 15:24:44 2026 -0700" name="generator">
   <link href="https://www.w3.org/TR/web-user-agents/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="82e8f4b1a98df2cf0b12407d5b47af9360f301f3" name="revision">
+  <meta content="42ac1993d0bda7a191ac1c139a7b241681f6ec23" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -581,7 +581,7 @@ dfn > a.self-link::before      { content: "#"; }
 </p>
    <h1 class="no-ref p-name" id="title">Web User Agents</h1>
    <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>,
-    <time class="dt-updated" datetime="2026-09-08">8 September 2026</time></p>
+    <time class="dt-updated" datetime="2026-09-23">23 September 2026</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -911,8 +911,14 @@ even when the user accepted the arrangement passively,
 for example a pre-installed default:
 its loyalty is owed to the user rather than with any paying party.</p>
    <p>A user agent can also help its user
-make a credible commitment to a page in order to get that page’s services,
-and it’s not disloyal to maintain that commitment after getting the services.</p>
+make a credible commitment to a page.
+A credible commitment is a deliberate restriction on the user’s future options
+that the page requires before providing its services.
+It’s not disloyal to maintain that commitment after getting the services.
+A loyal commitment constrains only the use of those services,
+not the user’s other data, settings, or choices.
+The user remains able to abandon the service and clear their data,
+with no further consequences.</p>
    <p>A user agent does not obstruct its users from switching to another user agent.</p>
    <div class="example no-marker" id="example-loyalty-portability">
     <a class="self-link" href="#example-loyalty-portability"></a>
