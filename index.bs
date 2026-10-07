@@ -162,9 +162,9 @@ clearly signal when a page attempts to gain elevated access.
 <div class="example" id="example-protection-multiple-permissions" heading="Multiple Permissions">
 
 When a page asks for several permissions,
-the user agent needs to ensure
+to enable informed consent, the user agent needs to ensure
 that the user can grant a subset of the requested permissions
-and that the user is aware of the full set they're granting.
+and that the user is aware of the full set the user is granting.
 
 </div>
 
