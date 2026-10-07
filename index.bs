@@ -278,6 +278,15 @@ A user agent serves its user's interests
 over its implementer's interests
 and over the interests of any other party.
 
+The duty of loyalty also applies
+when organizations that provide user agents
+participate in decisions that shape user agent capabilities
+or constrain future user choices.
+Because users can be underrepresented in those decisions,
+loyalty calls for those organizations to take reasonable steps
+to identify and represent diverse user interests,
+without treating themselves as users' exclusive representatives.
+
 A user agent can collect payment for its services
 without compromising its loyalty.
 Collecting payment does not change to whom the duty of loyalty is owed,
