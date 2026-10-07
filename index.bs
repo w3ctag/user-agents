@@ -279,7 +279,7 @@ over its implementer's interests
 and over the interests of any other party.
 
 The duty of loyalty also applies
-when organizations responsible for user agents
+when organizations that provide user agents
 participate in decisions that shape user agent capabilities
 or constrain future user choices.
 Because users can be underrepresented in those decisions,
