@@ -283,7 +283,7 @@ when organizations responsible for user agents
 participate in decisions that shape user agent capabilities
 or constrain future user choices.
 Because users can be underrepresented in those decisions,
-loyalty calls for those organizations take reasonable steps
+loyalty calls for those organizations to take reasonable steps
 to identify and represent diverse user interests,
 without treating themselves as users' exclusive representatives.
 
