@@ -69,7 +69,7 @@ A person can use many different user agents in their day-to-day life.
 
 The most common type of web user agent is the web browser —
 including in-app browsers that can follow cross-site links ([[evergreen-web#updates|any product that can load arbitrary content is a web browser]]).
-However, user agents also include other tools like
+However, user agents also include other intergration with services like
 search engines, voice-driven assistants, and generative AI systems
 that present snippets or summaries of website content,
 help people navigate and interact with websites,
@@ -78,9 +78,11 @@ or perform automated actions on the user’s behalf.
 User agent behavior is not completely defined by web standards
 or even by technical specifications in general.
 In particular,
-user agents choose which specifications to implement in order to best serve their users,
-and they implement proprietary user interfaces and other behavior
-around the specifications they do implement.
+user agents choose which specifications to implement, or otherwise expose, 
+in order to best serve their users.
+And they implement proprietary user interfaces and other behavior
+around the specifications they do implement. For example,
+the wording and iconography in permissions prompts often differ across user agents.
 
 ## User agents as software components ## {#ua-as-software}
 
@@ -123,9 +125,8 @@ Because some of these applications include only their own content,
 WebView libraries are not meant to be [=user agents=] on their own,
 and they do not implement the [=user agent duties=].
 
-Ultimately, an embedding application is responsible for
-following the [=user agent duties=]
-if it, or any part of it, acts as a [=user agent=].
+Ultimately, the application embedding the WebView is responsible for
+following the [=user agent duties=], which makes the WebView act as a [=user agent=].
 This can be straightforward if the application only browses external content through a [=user agent=] library.
 Developers need to take extra care
 to follow the [=user agent duties=]
@@ -139,7 +140,6 @@ A user agent owes its user various
 <dfn lt="user agent duties|UA duties">duties</dfn>,
 which are established through collective discussions
 and embodied in the various standards that user agents implement.
-
 
 ## Protection ## {#protection}
 
