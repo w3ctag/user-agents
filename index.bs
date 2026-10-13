@@ -161,10 +161,10 @@ clearly signal when a page attempts to gain elevated access.
 
 <div class="example" id="example-protection-multiple-permissions" heading="Multiple Permissions">
 
-If a page requests multiple permissions at once, it is initiated by
-user activation and the user agent needs to ensure both that the user can
-grant a subset of the requested permissions, and that they are aware of
-the full set that they are granting.
+When a page asks for several permissions,
+to enable informed consent, the user agent needs to ensure
+that the user can grant a subset of the requested permissions
+and that the user is aware of the full set the user is granting.
 
 </div>
 
@@ -221,7 +221,7 @@ for example by blocking the access or warning the user.
 
 A user agent mediates between the Web and its user,
 explaining what is happening in a form the user can understand.
-When the user agent performs actions automatically or on behalf of the user, it clearly communicates those actions and their consequences. When a user agent transforms content or takes actions on a user’s behalf in ways the user cannot readily observe, it should provide meaningful visibility into the sources it relied on, the actions it took, and the outcomes of those actions.
+When the user agent performs actions automatically or on behalf of the user, it clearly communicates those actions and their consequences. When a user agent transforms content or takes actions on a user’s behalf in ways the user cannot readily observe, it provides meaningful visibility into the sources it relied on, the actions it took, and the outcomes of those actions.
 
 A user agent can use multiple approaches for explanations, including
 text, permission prompts, indicators, previews, and other interface elements.
@@ -278,6 +278,15 @@ A user agent serves its user's interests
 over its implementer's interests
 and over the interests of any other party.
 
+The duty of loyalty also applies
+when organizations that provide user agents
+participate in decisions that shape user agent capabilities
+or constrain future user choices.
+Because users can be underrepresented in those decisions,
+loyalty calls for those organizations to take reasonable steps
+to identify and represent diverse user interests,
+without treating themselves as users' exclusive representatives.
+
 A user agent can collect payment for its services
 without compromising its loyalty.
 Collecting payment does not change to whom the duty of loyalty is owed,
@@ -286,8 +295,14 @@ for example a pre-installed default:
 its loyalty is owed to the user rather than with any paying party.
 
 A user agent can also help its user
-make a credible commitment to a page in order to get that page's services,
-and it's not disloyal to maintain that commitment after getting the services.
+make a credible commitment to a page.
+A credible commitment is a deliberate restriction on the user's future options
+that the page requires before providing its services.
+It's not disloyal to maintain that commitment after getting the services.
+A loyal commitment constrains only the use of those services,
+not the user's other data, settings, or choices.
+The user remains able to abandon the service and clear their data,
+with no further consequences.
 
 A user agent does not obstruct its users from switching to another user agent.
 
