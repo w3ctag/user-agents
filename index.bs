@@ -22,6 +22,19 @@ Abstract: User agents include both web browsers and other intermediaries
     and embodied in the various standards that user agents implement.
 
 </pre>
+<pre class='biblio'>
+{
+  "EFF-Resignation-Letter": {
+    "href": "https://www.eff.org/deeplinks/2017/09/open-letter-w3c-director-ceo-team-and-membership",
+    "title": "An open letter to the W3C Director, CEO, team and membership",
+    "authors": [
+      "Cory Doctorow"
+    ],
+    "publisher": "EFF",
+    "date": "18 September 2017"
+  }
+}
+</pre>
 
 # Introduction # {#introduction}
 
@@ -311,29 +324,53 @@ The user remains able to abandon the service and clear their data,
 with no further consequences.
 
 <div class="example" id="example-eme"
-     heading="Encrypted Media Extensions as a commitment device">
+     heading="EME as an imperfect collectively-bargained commitment device">
 
-The entities that own the copyright to content
-were only willing to let people watch or listen to that media over the web
-if audiences are technologically prevented from making extra copies.
+In approximately 2012,
+user agents and the W3C became worried that copyright owners
+would only allow users to play their media on non-web platforms
+that allowed them to use <abbr title="Digital Rights Management">DRM</abbr>
+to make it technically difficult to make extra copies of the media.
 A promise alone is not credible:
 with a simple digital file, nothing prevents copying.
-As a result, the W3C developed [[encrypted-media inline snapshot]],
-and user agents collectively maintain the commitment on their users' behalf
-by making copying difficult by construction.
-No individual user promises anything.
-The commitment is part of a standardized bargain,
-scoped to the protected media
-and balanced with requirements such as sandboxing the content decryption module.
 
+The user agents and other W3C members,
+as representatives of the web's users,
+effectively entered a collective bargaining process
+with the copyright owners and their representatives.
+Eventually, browsers agreed to ship a DRM system
+known as [[encrypted-media inline snapshot]] (<abbr>EME</abbr>),
+in return for
+* getting users access to the media over the web and
+* some user-serving restrictions on how the DRM can work,
+    including that it runs with restricted privileges and
+    doesn't give websites a permanent device identifier.
+
+With EME, individual users don't make any explicit promises.
+Instead, their user agent implements the standardized bargain in which,
+once a user decides to play the restricted media,
+they're automatically committed to the restrictions on copying it.
 It might seem like a violation of the [[#loyalty|loyalty duty]] that
 a user agent would refuse to help its user copy the file after receiving it.
 However, the commitment constrains only the media the user chose to receive,
 not the user's other data, settings, or choices,
-and without it the media would not have been available on the web at all.
-Maintaining it upholds the bargain
-that made the media available in the first place.
+and without it user might not have been able to receive the media at all.
 
+The question of whether user agents are right to make bargains like this
+always depends on the details of the bargain.
+Many people believe that EME was a mistake (e.g. [[EFF-Resignation-Letter direct]]).
+For example, EME
+* prevents people from using
+    the "fair use" and "fair dealing" exceptions to copyright.
+* prevents adaptations of the media
+    that would make it more accessible to the viewer.
+* blocks access to purchased media if the server it was purchased from breaks.
+* blocks access even after copyright has expired.
+* effectively requires new browsers to
+    license a widely-adopted [=CDM|Content Decryption Module=].
+
+Nonetheless, even if a user agent makes a mistake in bargaining for its users,
+it has only violated its duty of loyalty if it wasn't putting its users first.
 </div>
 
 A user agent can collect payment for its services
