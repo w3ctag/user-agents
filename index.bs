@@ -287,13 +287,6 @@ loyalty calls for those organizations to take reasonable steps
 to identify and represent diverse user interests,
 without treating themselves as users' exclusive representatives.
 
-A user agent can collect payment for its services
-without compromising its loyalty.
-Collecting payment does not change to whom the duty of loyalty is owed,
-even when the user accepted the arrangement passively,
-for example a pre-installed default:
-its loyalty is owed to the user rather than with any paying party.
-
 A user agent can also help its user
 make a credible commitment to a page.
 A credible commitment is a deliberate restriction on the user's future options
@@ -329,6 +322,13 @@ Maintaining it upholds the bargain
 that made the media available in the first place.
 
 </div>
+
+A user agent can collect payment for its services
+without compromising its loyalty.
+Collecting payment does not change to whom the duty of loyalty is owed,
+even when the user accepted the arrangement passively,
+for example a pre-installed default:
+its loyalty is owed to the user rather than with any paying party.
 
 A user agent does not obstruct its users from switching to another user agent.
 
