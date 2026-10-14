@@ -24,14 +24,14 @@ Abstract: Web user agents include both web browsers and other intermediaries
 </pre>
 <pre class='biblio'>
 {
-  "EFF-Resignation-Letter": {
-    "href": "https://www.eff.org/deeplinks/2017/09/open-letter-w3c-director-ceo-team-and-membership",
-    "title": "An open letter to the W3C Director, CEO, team and membership",
+  "EFF-Defending-Interoperability": {
+    "href": "https://www.eff.org/deeplinks/2016/03/interoperability-and-w3c-defending-future-present",
+    "title": "Interoperability and the W3C: Defending the Future from the Present",
     "authors": [
       "Cory Doctorow"
     ],
     "publisher": "EFF",
-    "date": "18 September 2017"
+    "date": "29 March 2016"
   }
 }
 </pre>
@@ -345,7 +345,8 @@ and without it user might not have been able to receive the media at all.
 
 The question of whether user agents are right to make bargains like this
 always depends on the details of the bargain.
-Many people believe that EME was a mistake (e.g. [[EFF-Resignation-Letter direct]]).
+Many people believe that EME was a mistake
+(e.g. [[EFF-Defending-Interoperability direct]]).
 For example, EME
 * prevents people from using
     the "fair use" and "fair dealing" exceptions to copyright.
@@ -355,6 +356,7 @@ For example, EME
 * blocks access even after copyright has expired.
 * effectively requires new browsers to
     license a widely-adopted [=CDM|Content Decryption Module=].
+* does not prevent illegitimate use of anticircumvention laws.
 
 Nonetheless, even if a user agent makes a mistake in bargaining for its users,
 it has only violated its duty of loyalty if it wasn't putting its users first.
