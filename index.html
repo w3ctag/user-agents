@@ -2,13 +2,13 @@
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Web User Agents</title>
+  <title>User Agents</title>
   <meta content="NOTE-ED" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED" rel="stylesheet">
-  <meta content="Bikeshed version ea4009a02, updated Thu Sep 17 15:24:44 2026 -0700" name="generator">
-  <link href="https://www.w3.org/TR/web-user-agents/" rel="canonical">
+  <meta content="Bikeshed version 49e9fdd4f, updated Tue Oct 13 14:27:53 2026 -0700" name="generator">
+  <link href="https://www.w3.org/TR/user-agents/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="844781d50e9a3b9cc86ce562d6efb27903883db5" name="revision">
+  <meta content="a11e1ca480f03d50d63afaa803bd0469cc0ef4f8" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -579,9 +579,9 @@ dfn > a.self-link::before      { content: "#"; }
     <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
 </a>
 </p>
-   <h1 class="no-ref p-name" id="title">Web User Agents</h1>
+   <h1 class="no-ref p-name" id="title">User Agents</h1>
    <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>,
-    <time class="dt-updated" datetime="2026-10-08">8 October 2026</time></p>
+    <time class="dt-updated" datetime="2026-10-14">14 October 2026</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -589,7 +589,7 @@ dfn > a.self-link::before      { content: "#"; }
       <dt>This version:
       <dd><a class="u-url" href="https://w3ctag.github.io/user-agents">https://w3ctag.github.io/user-agents</a>
       <dt>Latest published version:
-      <dd><a href="https://www.w3.org/TR/web-user-agents/">https://www.w3.org/TR/web-user-agents/</a>
+      <dd><a href="https://www.w3.org/TR/user-agents/">https://www.w3.org/TR/user-agents/</a>
       <dt>Feedback:
       <dd><a href="https://github.com/w3ctag/user-agents/issues/">GitHub</a>
       <dt class="editor">Editors:
@@ -605,7 +605,7 @@ dfn > a.self-link::before      { content: "#"; }
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="heading no-num no-ref no-toc settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p>Web user agents include both web browsers and other intermediaries
+   <p>User agents include both web browsers and other intermediaries
 between end-users and the web.
 Each user agent serves its user,
 not any of the other constituencies.
@@ -654,7 +654,7 @@ and embodied in the various standards that user agents implement.</p>
    <ol class="toc">
     <li><a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
     <li>
-     <a href="#what"><span class="secno">2</span> <span class="content">What is a web user agent</span></a>
+     <a href="#what"><span class="secno">2</span> <span class="content">What is a user agent</span></a>
      <ol class="toc">
       <li><a href="#ua-as-software"><span class="secno">2.1</span> <span class="content">User agents as software components</span></a>
      </ol>
@@ -708,21 +708,25 @@ and embodied in the standards that user agents implement.</p>
     <li data-md>
      <p><strong>Regulators and policymakers</strong> who seek to understand the duties, principles, and expectations guiding user agent behavior.</p>
    </ul>
-   <h2 class="heading settled" data-level="2" id="what"><span class="secno">2. </span><span class="content">What is a web user agent</span><a class="self-link" href="#what"></a></h2>
-   <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="general user agent" data-noexport id="general-user-agent">user agent</dfn>, in general, is any software entity
-that interacts with other entities on behalf of its user.
-User agents include many operating systems; email clients; PDF, ebook, and image viewers;
-<a data-link-type="dfn" href="https://w3c.github.io/webappsec-credential-management/#credential-manager" id="ref-for-credential-manager">credential managers</a>, including digital wallets; and many other kinds of software.</p>
-   <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="user agent|web user agent" data-noexport id="user-agent">web user agent</dfn> is
+   <h2 class="heading settled" data-level="2" id="what"><span class="secno">2. </span><span class="content">What is a user agent</span><a class="self-link" href="#what"></a></h2>
+   <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="user-agent">user agent</dfn> is
 any software entity that interacts with websites outside the entity itself,
 on behalf of its user,
 including simply rendering the content of websites or performing actions requested or authorized by the user.
-In web specifications and the rest of this document,
-web user agents are usually referred to as just "<a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent">user agents</a>".
-Either fully-qualified term can be used
-if there’s a chance of confusion.
 A person can use many different user agents in their day-to-day life.</p>
-   <p>The most common type of web user agent is the web browser —​including in-app browsers that can follow cross-site links (<a href="https://www.w3.org/2001/tag/doc/evergreen-web/#updates">any product that can load arbitrary content is a web browser</a>).
+   <div class="note" role="note">
+    <p>In other contexts, the term "user agent" is used to refer to software entities
+that help users accomplish tasks.
+Email clients, especially,
+have been called "mail user agents" since at least the late 1980s. <a data-link-type="biblio" href="#biblio-rfc1123" title="Requirements for Internet Hosts - Application and Support">[RFC1123]</a>
+Operating systems; PDF, ebook, and image viewers;
+<a data-link-type="dfn" href="https://w3c.github.io/webappsec-credential-management/#credential-manager" id="ref-for-credential-manager">credential managers</a>, including digital wallets; and many other kinds of software
+can also be thought of as user agents.
+However, when this document and web specifications use the term,
+they specifically refer to software that interacts with websites on users' behalf.</p>
+   </div>
+   <p>In the context of the web,
+the most common type of user agent is the web browser —​including in-app browsers that can follow cross-site links (<a href="https://www.w3.org/2001/tag/doc/evergreen-web/#updates">any product that can load arbitrary content is a web browser</a>).
 However, user agents also include other tools like
 search engines, voice-driven assistants, and generative AI systems
 that present snippets or summaries of website content,
@@ -738,8 +742,8 @@ around the specifications they do implement.</p>
    <p>As software components, user agents can be parts of larger applications
 and can call libraries that implement the web platform or parts of it.</p>
    <p>When an application makes a clear distinction
-between its pieces that are <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent①">user agents</a> and its pieces that aren’t,
-then only the <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent②">user agent</a> parts,
+between its pieces that are <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent">user agents</a> and its pieces that aren’t,
+then only the <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent①">user agent</a> parts,
 which browse content from outside the user agent itself,
 need to follow the <a data-link-type="dfn" href="#user-agent-duties" id="ref-for-user-agent-duties">user agent duties</a>.
 Parts that are clearly only showing the application’s own content
@@ -754,13 +758,13 @@ when browsing external content—then
 the application is expected to follow the <a data-link-type="dfn" href="#user-agent-duties" id="ref-for-user-agent-duties①">user agent duties</a>
 when showing its own content.</p>
    <p>Similarly, whether a library that implements the web platform
-is a full <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent③">user agent</a> depends on what it does.
+is a full <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent②">user agent</a> depends on what it does.
 Some, like <a href="https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller"><code>SFSafariViewController</code></a>
 and <a href="https://developer.chrome.com/docs/android/custom-tabs">Android Custom Tabs</a>
 take on the responsibility of implementing the <a data-link-type="dfn" href="#user-agent-duties" id="ref-for-user-agent-duties②">user agent duties</a>
 and of clearly distinguishing between the external content they browse
 and the content controlled by the embedding application.
-These libraries are <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent④">user agents</a>.</p>
+These libraries are <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent③">user agents</a>.</p>
    <p>Other libraries, like the
 <a href="https://developer.android.com/reference/android/webkit/WebView">Android</a>,
 <a href="https://developer.apple.com/documentation/webkit/wkwebview">iOS</a>,
@@ -768,15 +772,15 @@ and <a href="https://developer.microsoft.com/en-us/Microsoft-edge/webview2/">Win
 WebView libraries,
 are designed to support many kinds of applications.
 Because some of these applications include only their own content,
-WebView libraries are not meant to be <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent⑤">user agents</a> on their own,
+WebView libraries are not meant to be <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent④">user agents</a> on their own,
 and they do not implement the <a data-link-type="dfn" href="#user-agent-duties" id="ref-for-user-agent-duties③">user agent duties</a>.</p>
    <p>Ultimately, an embedding application is responsible for
 following the <a data-link-type="dfn" href="#user-agent-duties" id="ref-for-user-agent-duties④">user agent duties</a>
-if it, or any part of it, acts as a <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent⑥">user agent</a>.
-This can be straightforward if the application only browses external content through a <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent⑦">user agent</a> library.
+if it, or any part of it, acts as a <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent⑤">user agent</a>.
+This can be straightforward if the application only browses external content through a <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent⑥">user agent</a> library.
 Developers need to take extra care
 to follow the <a data-link-type="dfn" href="#user-agent-duties" id="ref-for-user-agent-duties⑤">user agent duties</a>
-when using a non-<a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent⑧">user agent</a> WebView to implement an in-app browser.</p>
+when using a non-<a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent⑦">user agent</a> WebView to implement an in-app browser.</p>
    <h2 class="heading settled" data-level="3" id="duties"><span class="secno">3. </span><span class="content">Duties of user agents</span><a class="self-link" href="#duties"></a></h2>
    <p>Each user agent serves its user (<a data-biblio-display="inline" data-link-type="biblio" href="https://www.rfc-editor.org/info/rfc8890/"><cite>The Internet is for End Users</cite></a>),
 not any of the other constituencies.
@@ -947,11 +951,9 @@ and to <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c
   <h2 class="heading no-num no-ref settled" id="index"><span class="content">Index</span><a class="self-link" href="#index"></a></h2>
   <h3 class="heading no-num no-ref settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="#index-defined-here"></a></h3>
   <ul class="index">
-   <li><a href="#general-user-agent">general user agent</a><span>, in § 2</span>
    <li><a href="#user-agent-duties">UA duties</a><span>, in § 3</span>
    <li><a href="#user-agent">user agent</a><span>, in § 2</span>
    <li><a href="#user-agent-duties">user agent duties</a><span>, in § 3</span>
-   <li><a href="#user-agent">web user agent</a><span>, in § 2</span>
   </ul>
   <h3 class="heading no-num no-ref settled" id="index-defined-elsewhere"><span class="content">Terms defined by reference</span><a class="self-link" href="#index-defined-elsewhere"></a></h3>
   <ul class="index">
@@ -980,8 +982,6 @@ and to <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c
   <h2 class="heading no-num no-ref settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
   <h3 class="heading no-num no-ref settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
   <dl>
-   <dt id="biblio-credential-management-1">[CREDENTIAL-MANAGEMENT-1]
-   <dd>Nina Satragno; Marcos Caceres. <a href="https://w3c.github.io/webappsec-credential-management/"><cite>Credential Management Level 1</cite></a>. URL: <a href="https://w3c.github.io/webappsec-credential-management/">https://w3c.github.io/webappsec-credential-management/</a>
    <dt id="biblio-design-principles">[DESIGN-PRINCIPLES]
    <dd>Jeffrey Yasskin. <a href="https://w3ctag.github.io/design-principles/"><cite>Web Platform Design Principles</cite></a>. URL: <a href="https://w3ctag.github.io/design-principles/">https://w3ctag.github.io/design-principles/</a>
    <dt id="biblio-evergreen-web">[EVERGREEN-WEB]
@@ -991,6 +991,8 @@ and to <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c
   </dl>
   <h3 class="heading no-num no-ref settled" id="informative"><span class="content">Non-Normative References</span><a class="self-link" href="#informative"></a></h3>
   <dl>
+   <dt id="biblio-credential-management-1">[CREDENTIAL-MANAGEMENT-1]
+   <dd>Nina Satragno; Marcos Caceres. <a href="https://w3c.github.io/webappsec-credential-management/"><cite>Credential Management Level 1</cite></a>. URL: <a href="https://w3c.github.io/webappsec-credential-management/">https://w3c.github.io/webappsec-credential-management/</a>
    <dt id="biblio-css-fonts-5">[CSS-FONTS-5]
    <dd>Chris Lilley. <a href="https://drafts.csswg.org/css-fonts-5/"><cite>CSS Fonts Module Level 5</cite></a>. URL: <a href="https://drafts.csswg.org/css-fonts-5/">https://drafts.csswg.org/css-fonts-5/</a>
    <dt id="biblio-file-system-access">[FILE-SYSTEM-ACCESS]
@@ -1003,6 +1005,8 @@ and to <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c
    <dd>Cullen Jennings; et al. <a href="https://w3c.github.io/mediacapture-main/"><cite>Media Capture and Streams</cite></a>. URL: <a href="https://w3c.github.io/mediacapture-main/">https://w3c.github.io/mediacapture-main/</a>
    <dt id="biblio-privacy-principles">[PRIVACY-PRINCIPLES]
    <dd>Robin Berjon; Jeffrey Yasskin. <a href="https://w3ctag.github.io/privacy-principles/"><cite>Privacy Principles</cite></a>. URL: <a href="https://w3ctag.github.io/privacy-principles/">https://w3ctag.github.io/privacy-principles/</a>
+   <dt id="biblio-rfc1123">[RFC1123]
+   <dd>R. Braden, Ed.. <a href="https://www.rfc-editor.org/info/rfc1123/"><cite>Requirements for Internet Hosts - Application and Support</cite></a>. October 1989. Internet Standard. URL: <a href="https://www.rfc-editor.org/info/rfc1123/">https://www.rfc-editor.org/info/rfc1123/</a>
    <dt id="biblio-unsanctioned-tracking">[UNSANCTIONED-TRACKING]
    <dd>Mark Nottingham. <a href="http://www.w3.org/2001/tag/doc/unsanctioned-tracking/"><cite>Unsanctioned Web Tracking</cite></a>. 17 July 2015. TAG Finding. URL: <a href="http://www.w3.org/2001/tag/doc/unsanctioned-tracking/">http://www.w3.org/2001/tag/doc/unsanctioned-tracking/</a>
    <dt id="biblio-url">[URL]
@@ -1211,10 +1215,9 @@ let dfnPanelData = {
 "0497de86": {"dfnID":"0497de86","dfnText":"@font-face","external":true,"refSections":[{"refs":[{"id":"ref-for-at-font-face-rule"}],"title":"3.1. Protection"}],"url":"https://drafts.csswg.org/css-fonts-5/#at-font-face-rule"},
 "086e3aff": {"dfnID":"086e3aff","dfnText":"origin","external":true,"refSections":[{"refs":[{"id":"ref-for-concept-origin"}],"title":"3.1. Protection"}],"url":"https://html.spec.whatwg.org/multipage/browsers.html#concept-origin"},
 "6d60ab67": {"dfnID":"6d60ab67","dfnText":"File Upload","external":true,"refSections":[{"refs":[{"id":"ref-for-file-upload-state-(type%3Dfile)"}],"title":"3.1. Protection"}],"url":"https://html.spec.whatwg.org/multipage/input.html#file-upload-state-(type%3Dfile)"},
-"88014fd7": {"dfnID":"88014fd7","dfnText":"credential manager","external":true,"refSections":[{"refs":[{"id":"ref-for-credential-manager"}],"title":"2. What is a web user agent"}],"url":"https://w3c.github.io/webappsec-credential-management/#credential-manager"},
+"88014fd7": {"dfnID":"88014fd7","dfnText":"credential manager","external":true,"refSections":[{"refs":[{"id":"ref-for-credential-manager"}],"title":"2. What is a user agent"}],"url":"https://w3c.github.io/webappsec-credential-management/#credential-manager"},
 "959ad97b": {"dfnID":"959ad97b","dfnText":"origin","external":true,"refSections":[{"refs":[{"id":"ref-for-concept-url-origin"}],"title":"3.1. Protection"}],"url":"https://url.spec.whatwg.org/#concept-url-origin"},
-"general-user-agent": {"dfnID":"general-user-agent","dfnText":"user agent","external":false,"refSections":[],"url":"#general-user-agent"},
-"user-agent": {"dfnID":"user-agent","dfnText":"web user agent","external":false,"refSections":[{"refs":[{"id":"ref-for-user-agent"}],"title":"2. What is a web user agent"},{"refs":[{"id":"ref-for-user-agent\u2460"},{"id":"ref-for-user-agent\u2461"},{"id":"ref-for-user-agent\u2462"},{"id":"ref-for-user-agent\u2463"},{"id":"ref-for-user-agent\u2464"},{"id":"ref-for-user-agent\u2465"},{"id":"ref-for-user-agent\u2466"},{"id":"ref-for-user-agent\u2467"}],"title":"2.1. User agents as software components"}],"url":"#user-agent"},
+"user-agent": {"dfnID":"user-agent","dfnText":"user agent","external":false,"refSections":[{"refs":[{"id":"ref-for-user-agent"},{"id":"ref-for-user-agent\u2460"},{"id":"ref-for-user-agent\u2461"},{"id":"ref-for-user-agent\u2462"},{"id":"ref-for-user-agent\u2463"},{"id":"ref-for-user-agent\u2464"},{"id":"ref-for-user-agent\u2465"},{"id":"ref-for-user-agent\u2466"}],"title":"2.1. User agents as software components"}],"url":"#user-agent"},
 "user-agent-duties": {"dfnID":"user-agent-duties","dfnText":"duties","external":false,"refSections":[{"refs":[{"id":"ref-for-user-agent-duties"},{"id":"ref-for-user-agent-duties\u2460"},{"id":"ref-for-user-agent-duties\u2461"},{"id":"ref-for-user-agent-duties\u2462"},{"id":"ref-for-user-agent-duties\u2463"},{"id":"ref-for-user-agent-duties\u2464"}],"title":"2.1. User agents as software components"}],"url":"#user-agent-duties"},
 };
 
@@ -1604,8 +1607,8 @@ function genLinkingSyntaxes(dfn) {
 "use strict";
 {
 let refsData = {
-"#user-agent": {"displayText":"user agent","export":true,"for_":[],"level":"","normative":true,"shortname":"web-user-agents","spec":"web-user-agents","status":"local","text":"user agent","type":"dfn","url":"#user-agent"},
-"#user-agent-duties": {"displayText":"user agent duties","export":true,"for_":[],"level":"","normative":true,"shortname":"web-user-agents","spec":"web-user-agents","status":"local","text":"user agent duties","type":"dfn","url":"#user-agent-duties"},
+"#user-agent": {"displayText":"user agent","export":true,"for_":[],"level":"","normative":true,"shortname":"user-agents","spec":"user-agents","status":"local","text":"user agent","type":"dfn","url":"#user-agent"},
+"#user-agent-duties": {"displayText":"user agent duties","export":true,"for_":[],"level":"","normative":true,"shortname":"user-agents","spec":"user-agents","status":"local","text":"user agent duties","type":"dfn","url":"#user-agent-duties"},
 "https://drafts.csswg.org/css-fonts-5/#at-font-face-rule": {"displayText":"@font-face","export":true,"for_":[],"level":"5","normative":true,"shortname":"css-fonts","spec":"css-fonts-5","status":"current","text":"@font-face","type":"at-rule","url":"https://drafts.csswg.org/css-fonts-5/#at-font-face-rule"},
 "https://html.spec.whatwg.org/multipage/browsers.html#concept-origin": {"displayText":"origin","export":true,"for_":[],"level":"1","normative":true,"shortname":"html","spec":"html","status":"current","text":"origin","type":"dfn","url":"https://html.spec.whatwg.org/multipage/browsers.html#concept-origin"},
 "https://html.spec.whatwg.org/multipage/input.html#file-upload-state-(type%3Dfile)": {"displayText":"File Upload","export":true,"for_":["input"],"level":"1","normative":true,"shortname":"html","spec":"html","status":"current","text":"file upload","type":"element-state","url":"https://html.spec.whatwg.org/multipage/input.html#file-upload-state-(type%3Dfile)"},
