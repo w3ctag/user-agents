@@ -69,7 +69,7 @@ A person can use many different user agents in their day-to-day life.
 
 The most common type of web user agent is the web browser —
 including in-app browsers that can follow cross-site links ([[evergreen-web#updates|any product that can load arbitrary content is a web browser]]).
-However, user agents also include other intergration with services like
+However, user agents also include other tools like
 search engines, voice-driven assistants, and generative AI systems
 that present snippets or summaries of website content,
 help people navigate and interact with websites,
@@ -82,7 +82,11 @@ user agents choose which specifications to implement, or otherwise expose,
 in order to best serve their users.
 And they implement proprietary user interfaces and other behavior
 around the specifications they do implement. For example,
-the wording and iconography in permissions prompts often differ across user agents.
+For example, the wording and iconography
+in permissions prompts, error messages, and privacy indicators
+often differ across user agents.
+User agents also add features that no specification requires,
+such as bookmarks, reader modes, and developer tools.
 
 ## User agents as software components ## {#ua-as-software}
 
