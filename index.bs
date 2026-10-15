@@ -126,7 +126,8 @@ WebView libraries are not meant to be [=user agents=] on their own,
 and they do not implement the [=user agent duties=].
 
 Ultimately, the application embedding the WebView is responsible for
-following the [=user agent duties=].
+following the [=user agent duties=]
+if it, or any part of it, acts as a [=user agent=].
 This can be straightforward if the application only browses external content through a [=user agent=] library.
 Developers need to take extra care
 to follow the [=user agent duties=]
