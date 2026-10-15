@@ -56,6 +56,7 @@ A <dfn noexport>user agent</dfn> is
 any software entity that interacts with websites outside the entity itself,
 on behalf of its user,
 including simply rendering the content of websites or performing actions requested or authorized by the user.
+[[evergreen-web#updates|A product that can load arbitrary content from the public web is a user agent.]]
 A person can use many different user agents in their day-to-day life.
 
 <div class=note>
@@ -74,7 +75,7 @@ they specifically refer to software that interacts with websites on users' behal
 
 In the context of the web,
 the most common type of user agent is the web browser —
-including in-app browsers that can follow cross-site links ([[evergreen-web#updates|any product that can load arbitrary content is a web browser]]).
+including in-app browsers that can follow cross-site links.
 However, user agents also include other tools like
 search engines, voice-driven assistants, and generative AI systems
 that present snippets or summaries of website content,
