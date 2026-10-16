@@ -339,7 +339,7 @@ as representatives of the web's users,
 effectively entered a collective bargaining process
 with the copyright owners and their representatives.
 Eventually, browsers agreed to ship a DRM system
-known as [[encrypted-media inline snapshot]] (<abbr>EME</abbr>),
+known as [[encrypted-media inline snapshot]] (<abbr title="Encrypted Media Extensions">EME</abbr>),
 in return for
 * getting users access to the media over the web and
 * some user-serving restrictions on how the DRM can work,
@@ -365,7 +365,7 @@ For example, EME
     the "fair use" and "fair dealing" exceptions to copyright.
 * prevents adaptations of the media
     that would make it more accessible to the viewer.
-* blocks access to purchased media if the server it was purchased from breaks.
+* blocks access to purchased media if the server it was purchased from becomes unavailable.
 * blocks access even after copyright has expired.
 * effectively requires new browsers to
     license a widely-adopted [=CDM|Content Decryption Module=].
