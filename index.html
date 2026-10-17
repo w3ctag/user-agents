@@ -8,7 +8,7 @@
   <meta content="Bikeshed version 49e9fdd4f, updated Tue Oct 13 14:27:53 2026 -0700" name="generator">
   <link href="https://www.w3.org/TR/user-agents/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="3858e9430262ac1a1bd6461b320757279c7a68c0" name="revision">
+  <meta content="90c742c9ed2b064e0977137b98abbb473d83b53d" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -581,7 +581,7 @@ dfn > a.self-link::before      { content: "#"; }
 </p>
    <h1 class="no-ref p-name" id="title">User Agents</h1>
    <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>,
-    <time class="dt-updated" datetime="2026-10-15">15 October 2026</time></p>
+    <time class="dt-updated" datetime="2026-10-17">17 October 2026</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -736,9 +736,16 @@ or perform automated actions on the user’s behalf.</p>
    <p>User agent behavior is not completely defined by web standards
 or even by technical specifications in general.
 In particular,
-user agents choose which specifications to implement in order to best serve their users,
-and they implement proprietary user interfaces and other behavior
-around the specifications they do implement.</p>
+user agents choose which features to implement,
+and how much of each to expose,
+in order to best serve their users.
+They implement proprietary user interfaces and other behavior
+surrounding the features they do implement.
+For example, the wording and iconography
+in permissions prompts, error messages, and privacy indicators
+often differ across user agents.
+User agents also add features that no specification requires,
+such as bookmarks, reader modes, and developer tools.</p>
    <h3 class="heading settled" data-level="2.1" id="ua-as-software"><span class="secno">2.1. </span><span class="content">User agents as software components</span><a class="self-link" href="#ua-as-software"></a></h3>
    <p>As software components, user agents can be parts of larger applications
 and can call libraries that implement the web platform or parts of it.</p>
@@ -775,7 +782,7 @@ are designed to support many kinds of applications.
 Because some of these applications include only their own content,
 WebView libraries are not meant to be <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent④">user agents</a> on their own,
 and they do not implement the <a data-link-type="dfn" href="#user-agent-duties" id="ref-for-user-agent-duties③">user agent duties</a>.</p>
-   <p>Ultimately, an embedding application is responsible for
+   <p>Ultimately, the application embedding the WebView is responsible for
 following the <a data-link-type="dfn" href="#user-agent-duties" id="ref-for-user-agent-duties④">user agent duties</a>
 if it, or any part of it, acts as a <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent⑤">user agent</a>.
 This can be straightforward if the application only browses external content through a <a data-link-type="dfn" href="#user-agent" id="ref-for-user-agent⑥">user agent</a> library.
