@@ -360,6 +360,7 @@ weighing the benefit the user receives against the restrictions imposed.
 The balance depends on context,
 but a commitment reflects loyalty only when
 user interests genuinely guide that evaluation.
+
 Many people believe that EME was a mistake
 (e.g. [[EFF-Defending-Interoperability direct]]).
 For example, EME
