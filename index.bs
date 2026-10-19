@@ -327,7 +327,7 @@ with no further consequences.
      heading="EME as an imperfect collectively-bargained commitment device">
 
 In approximately 2012,
-user agents and the W3C became worried that copyright owners
+user agent vendors and the W3C became worried that copyright owners
 would only allow users to play their media on non-web platforms
 that allowed them to use <abbr title="Digital Rights Management">DRM</abbr>
 to make it technically difficult to make extra copies of the media.
@@ -335,7 +335,6 @@ A promise alone is not credible:
 with a simple digital file, nothing prevents copying.
 
 The user agents and other W3C members,
-as representatives of the web's users,
 effectively entered a collective bargaining process
 with the copyright owners and their representatives.
 Eventually, browsers agreed to ship a DRM system
@@ -356,8 +355,11 @@ However, the commitment constrains only the media the user chose to receive,
 not the user's other data, settings, or choices,
 and without it user might not have been able to receive the media at all.
 
-The question of whether user agents are right to make bargains like this
-always depends on the details of the bargain.
+Evaluating whether a commitment serves users requires
+weighing the benefit the user receives against the restrictions imposed.
+The balance depends on context, 
+but a commitment reflects loyalty only when
+user interests genuinely guide that evaluation.
 Many people believe that EME was a mistake
 (e.g. [[EFF-Defending-Interoperability direct]]).
 For example, EME
