@@ -334,7 +334,7 @@ to make it technically difficult to make extra copies of the media.
 A promise alone is not credible:
 with a simple digital file, nothing prevents copying.
 
-The user agents and other W3C members,
+The user agent vendors and other W3C members
 effectively entered a collective bargaining process
 with the copyright owners and their representatives.
 Eventually, browsers agreed to ship a DRM system
@@ -357,7 +357,7 @@ and without it user might not have been able to receive the media at all.
 
 Evaluating whether a commitment serves users requires
 weighing the benefit the user receives against the restrictions imposed.
-The balance depends on context, 
+The balance depends on context,
 but a commitment reflects loyalty only when
 user interests genuinely guide that evaluation.
 Many people believe that EME was a mistake
