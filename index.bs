@@ -22,6 +22,19 @@ Abstract: User agents include both web browsers and other intermediaries
     and embodied in the various standards that user agents implement.
 
 </pre>
+<pre class='biblio'>
+{
+  "EFF-Defending-Interoperability": {
+    "href": "https://www.eff.org/deeplinks/2016/03/interoperability-and-w3c-defending-future-present",
+    "title": "Interoperability and the W3C: Defending the Future from the Present",
+    "authors": [
+      "Cory Doctorow"
+    ],
+    "publisher": "EFF",
+    "date": "29 March 2016"
+  }
+}
+</pre>
 
 # Introduction # {#introduction}
 
@@ -300,13 +313,6 @@ loyalty calls for those organizations to take reasonable steps
 to identify and represent diverse user interests,
 without treating themselves as users' exclusive representatives.
 
-A user agent can collect payment for its services
-without compromising its loyalty.
-Collecting payment does not change to whom the duty of loyalty is owed,
-even when the user accepted the arrangement passively,
-for example a pre-installed default:
-its loyalty is owed to the user rather than with any paying party.
-
 A user agent can also help its user
 make a credible commitment to a page.
 A credible commitment is a deliberate restriction on the user's future options
@@ -316,6 +322,68 @@ A loyal commitment constrains only the use of those services,
 not the user's other data, settings, or choices.
 The user remains able to abandon the service and clear their data,
 with no further consequences.
+
+<div class="example" id="example-eme"
+     heading="EME as an imperfect collectively-bargained commitment device">
+
+In approximately 2012,
+user agent vendors and the W3C became worried that copyright owners
+would only allow users to play their media on non-web platforms
+that allowed them to use <abbr title="Digital Rights Management">DRM</abbr>
+to make it technically difficult to make extra copies of the media.
+A promise alone is not credible:
+with a simple digital file, nothing prevents copying.
+
+The user agent vendors and other W3C members
+effectively entered a collective bargaining process
+with the copyright owners and their representatives.
+Eventually, browsers agreed to ship a DRM system
+known as [[encrypted-media inline snapshot]] (<abbr title="Encrypted Media Extensions">EME</abbr>),
+in return for
+* getting users access to the media over the web and
+* some user-serving restrictions on how the DRM can work,
+    including that it runs with restricted privileges and
+    doesn't give websites a permanent device identifier.
+
+With EME, individual users don't make any explicit promises.
+Instead, their user agent implements the standardized bargain in which,
+once a user decides to play the restricted media,
+they're automatically committed to the restrictions on copying it.
+It might seem like a violation of the [[#loyalty|loyalty duty]] that
+a user agent would refuse to help its user copy the file after receiving it.
+However, the commitment constrains only the media the user chose to receive,
+not the user's other data, settings, or choices,
+and without it user might not have been able to receive the media at all.
+
+Evaluating whether a commitment serves users requires
+weighing the benefit the user receives against the restrictions imposed.
+The balance depends on context,
+but a commitment reflects loyalty only when
+user interests genuinely guide that evaluation.
+
+Many people believe that EME was a mistake
+(e.g. [[EFF-Defending-Interoperability direct]]).
+For example, EME
+* prevents people from using
+    the "fair use" and "fair dealing" exceptions to copyright.
+* prevents adaptations of the media
+    that would make it more accessible to the viewer.
+* blocks access to purchased media if the server it was purchased from becomes unavailable.
+* blocks access even after copyright has expired.
+* effectively requires new browsers to
+    license a widely-adopted [=CDM|Content Decryption Module=].
+* does not prevent illegitimate use of anticircumvention laws.
+
+Nonetheless, even if a user agent makes a mistake in bargaining for its users,
+it has only violated its duty of loyalty if it wasn't putting its users first.
+</div>
+
+A user agent can collect payment for its services
+without compromising its loyalty.
+Collecting payment does not change to whom the duty of loyalty is owed,
+even when the user accepted the arrangement passively,
+for example a pre-installed default:
+its loyalty is owed to the user rather than with any paying party.
 
 A user agent does not obstruct its users from switching to another user agent.
 
