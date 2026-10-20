@@ -8,7 +8,7 @@
   <meta content="Bikeshed version 49e9fdd4f, updated Tue Oct 13 14:27:53 2026 -0700" name="generator">
   <link href="https://www.w3.org/TR/user-agents/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="90c742c9ed2b064e0977137b98abbb473d83b53d" name="revision">
+  <meta content="2b69205e8e3282f613c99530a6658ae96fe62cb4" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -581,7 +581,7 @@ dfn > a.self-link::before      { content: "#"; }
 </p>
    <h1 class="no-ref p-name" id="title">User Agents</h1>
    <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>,
-    <time class="dt-updated" datetime="2026-10-17">17 October 2026</time></p>
+    <time class="dt-updated" datetime="2026-10-20">20 October 2026</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -924,12 +924,6 @@ Because users can be underrepresented in those decisions,
 loyalty calls for those organizations to take reasonable steps
 to identify and represent diverse user interests,
 without treating themselves as users' exclusive representatives.</p>
-   <p>A user agent can collect payment for its services
-without compromising its loyalty.
-Collecting payment does not change to whom the duty of loyalty is owed,
-even when the user accepted the arrangement passively,
-for example a pre-installed default:
-its loyalty is owed to the user rather than with any paying party.</p>
    <p>A user agent can also help its user
 make a credible commitment to a page.
 A credible commitment is a deliberate restriction on the user’s future options
@@ -939,6 +933,73 @@ A loyal commitment constrains only the use of those services,
 not the user’s other data, settings, or choices.
 The user remains able to abandon the service and clear their data,
 with no further consequences.</p>
+   <div class="example no-marker" id="example-eme">
+    <a class="self-link" href="#example-eme"></a>
+    <div class="marker">EXAMPLE: EME as an imperfect collectively-bargained commitment device</div>
+    <p>In approximately 2012,
+user agent vendors and the W3C became worried that copyright owners
+would only allow users to play their media on non-web platforms
+that allowed them to use <abbr title="Digital Rights Management">DRM</abbr>
+to make it technically difficult to make extra copies of the media.
+A promise alone is not credible:
+with a simple digital file, nothing prevents copying.</p>
+    <p>The user agent vendors and other W3C members
+effectively entered a collective bargaining process
+with the copyright owners and their representatives.
+Eventually, browsers agreed to ship a DRM system
+known as <a data-biblio-display="inline" data-link-type="biblio" href="https://www.w3.org/TR/encrypted-media-2/"><cite>Encrypted Media Extensions</cite></a> (<abbr title="Encrypted Media Extensions">EME</abbr>),
+in return for</p>
+    <ul>
+     <li data-md>
+      <p>getting users access to the media over the web and</p>
+     <li data-md>
+      <p>some user-serving restrictions on how the DRM can work,
+including that it runs with restricted privileges and
+doesn’t give websites a permanent device identifier.</p>
+    </ul>
+    <p>With EME, individual users don’t make any explicit promises.
+Instead, their user agent implements the standardized bargain in which,
+once a user decides to play the restricted media,
+they’re automatically committed to the restrictions on copying it.
+It might seem like a violation of the <a href="#loyalty">loyalty duty</a> that
+a user agent would refuse to help its user copy the file after receiving it.
+However, the commitment constrains only the media the user chose to receive,
+not the user’s other data, settings, or choices,
+and without it user might not have been able to receive the media at all.</p>
+    <p>Evaluating whether a commitment serves users requires
+weighing the benefit the user receives against the restrictions imposed.
+The balance depends on context,
+but a commitment reflects loyalty only when
+user interests genuinely guide that evaluation.</p>
+    <p>Many people believe that EME was a mistake
+(e.g. <a data-biblio-display="direct" data-link-type="biblio" href="https://www.eff.org/deeplinks/2016/03/interoperability-and-w3c-defending-future-present" title="Interoperability and the W3C: Defending the Future from the Present">[EFF-Defending-Interoperability]</a>).
+For example, EME</p>
+    <ul>
+     <li data-md>
+      <p>prevents people from using
+the "fair use" and "fair dealing" exceptions to copyright.</p>
+     <li data-md>
+      <p>prevents adaptations of the media
+that would make it more accessible to the viewer.</p>
+     <li data-md>
+      <p>blocks access to purchased media if the server it was purchased from becomes unavailable.</p>
+     <li data-md>
+      <p>blocks access even after copyright has expired.</p>
+     <li data-md>
+      <p>effectively requires new browsers to
+license a widely-adopted <a data-link-type="dfn" href="https://w3c.github.io/encrypted-media/#dfn-cdm" id="ref-for-dfn-cdm">Content Decryption Module</a>.</p>
+     <li data-md>
+      <p>does not prevent illegitimate use of anticircumvention laws.</p>
+    </ul>
+    <p>Nonetheless, even if a user agent makes a mistake in bargaining for its users,
+it has only violated its duty of loyalty if it wasn’t putting its users first.</p>
+   </div>
+   <p>A user agent can collect payment for its services
+without compromising its loyalty.
+Collecting payment does not change to whom the duty of loyalty is owed,
+even when the user accepted the arrangement passively,
+for example a pre-installed default:
+its loyalty is owed to the user rather than with any paying party.</p>
    <p>A user agent does not obstruct its users from switching to another user agent.</p>
    <div class="example no-marker" id="example-loyalty-portability">
     <a class="self-link" href="#example-loyalty-portability"></a>
@@ -976,6 +1037,11 @@ and to <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c
      <li><span class="dfn-paneled" id="0497de86">@font-face</span>
     </ul>
    <li>
+    <a data-link-type="biblio">[ENCRYPTED-MEDIA]</a> defines the following terms:
+    <ul>
+     <li><span class="dfn-paneled" id="edcb119e">CDM</span>
+    </ul>
+   <li>
     <a data-link-type="biblio">[HTML]</a> defines the following terms:
     <ul>
      <li><span class="dfn-paneled" id="6d60ab67">File Upload</span>
@@ -1003,6 +1069,10 @@ and to <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c
    <dd>Nina Satragno; Marcos Caceres. <a href="https://w3c.github.io/webappsec-credential-management/"><cite>Credential Management Level 1</cite></a>. URL: <a href="https://w3c.github.io/webappsec-credential-management/">https://w3c.github.io/webappsec-credential-management/</a>
    <dt id="biblio-css-fonts-5">[CSS-FONTS-5]
    <dd>Chris Lilley. <a href="https://drafts.csswg.org/css-fonts-5/"><cite>CSS Fonts Module Level 5</cite></a>. URL: <a href="https://drafts.csswg.org/css-fonts-5/">https://drafts.csswg.org/css-fonts-5/</a>
+   <dt id="biblio-eff-defending-interoperability">[EFF-Defending-Interoperability]
+   <dd>Cory Doctorow. <a href="https://www.eff.org/deeplinks/2016/03/interoperability-and-w3c-defending-future-present"><cite>Interoperability and the W3C: Defending the Future from the Present</cite></a>. 29 March 2016. URL: <a href="https://www.eff.org/deeplinks/2016/03/interoperability-and-w3c-defending-future-present">https://www.eff.org/deeplinks/2016/03/interoperability-and-w3c-defending-future-present</a>
+   <dt id="biblio-encrypted-media">[ENCRYPTED-MEDIA]
+   <dd>Xiaohan Wang; Greg Freedman. <a href="https://w3c.github.io/encrypted-media/"><cite>Encrypted Media Extensions</cite></a>. URL: <a href="https://w3c.github.io/encrypted-media/">https://w3c.github.io/encrypted-media/</a>
    <dt id="biblio-file-system-access">[FILE-SYSTEM-ACCESS]
    <dd><a href="https://wicg.github.io/file-system-access/"><cite>File System Access</cite></a>. Draft Community Group Report. URL: <a href="https://wicg.github.io/file-system-access/">https://wicg.github.io/file-system-access/</a>
    <dt id="biblio-html">[HTML]
@@ -1225,6 +1295,7 @@ let dfnPanelData = {
 "6d60ab67": {"dfnID":"6d60ab67","dfnText":"File Upload","external":true,"refSections":[{"refs":[{"id":"ref-for-file-upload-state-(type%3Dfile)"}],"title":"3.1. Protection"}],"url":"https://html.spec.whatwg.org/multipage/input.html#file-upload-state-(type%3Dfile)"},
 "88014fd7": {"dfnID":"88014fd7","dfnText":"credential manager","external":true,"refSections":[{"refs":[{"id":"ref-for-credential-manager"}],"title":"2. What is a user agent"}],"url":"https://w3c.github.io/webappsec-credential-management/#credential-manager"},
 "959ad97b": {"dfnID":"959ad97b","dfnText":"origin","external":true,"refSections":[{"refs":[{"id":"ref-for-concept-url-origin"}],"title":"3.1. Protection"}],"url":"https://url.spec.whatwg.org/#concept-url-origin"},
+"edcb119e": {"dfnID":"edcb119e","dfnText":"CDM","external":true,"refSections":[{"refs":[{"id":"ref-for-dfn-cdm"}],"title":"3.3. Loyalty"}],"url":"https://w3c.github.io/encrypted-media/#dfn-cdm"},
 "user-agent": {"dfnID":"user-agent","dfnText":"user agent","external":false,"refSections":[{"refs":[{"id":"ref-for-user-agent"},{"id":"ref-for-user-agent\u2460"},{"id":"ref-for-user-agent\u2461"},{"id":"ref-for-user-agent\u2462"},{"id":"ref-for-user-agent\u2463"},{"id":"ref-for-user-agent\u2464"},{"id":"ref-for-user-agent\u2465"},{"id":"ref-for-user-agent\u2466"}],"title":"2.1. User agents as software components"}],"url":"#user-agent"},
 "user-agent-duties": {"dfnID":"user-agent-duties","dfnText":"duties","external":false,"refSections":[{"refs":[{"id":"ref-for-user-agent-duties"},{"id":"ref-for-user-agent-duties\u2460"},{"id":"ref-for-user-agent-duties\u2461"},{"id":"ref-for-user-agent-duties\u2462"},{"id":"ref-for-user-agent-duties\u2463"},{"id":"ref-for-user-agent-duties\u2464"}],"title":"2.1. User agents as software components"}],"url":"#user-agent-duties"},
 };
@@ -1621,6 +1692,7 @@ let refsData = {
 "https://html.spec.whatwg.org/multipage/browsers.html#concept-origin": {"displayText":"origin","export":true,"for_":[],"level":"1","normative":true,"shortname":"html","spec":"html","status":"current","text":"origin","type":"dfn","url":"https://html.spec.whatwg.org/multipage/browsers.html#concept-origin"},
 "https://html.spec.whatwg.org/multipage/input.html#file-upload-state-(type%3Dfile)": {"displayText":"File Upload","export":true,"for_":["input"],"level":"1","normative":true,"shortname":"html","spec":"html","status":"current","text":"file upload","type":"element-state","url":"https://html.spec.whatwg.org/multipage/input.html#file-upload-state-(type%3Dfile)"},
 "https://url.spec.whatwg.org/#concept-url-origin": {"displayText":"origin","export":true,"for_":["url"],"level":"1","normative":true,"shortname":"url","spec":"url","status":"current","text":"origin","type":"dfn","url":"https://url.spec.whatwg.org/#concept-url-origin"},
+"https://w3c.github.io/encrypted-media/#dfn-cdm": {"displayText":"CDM","export":true,"for_":[],"level":"2","normative":true,"shortname":"encrypted-media","spec":"encrypted-media-2","status":"current","text":"cdm","type":"dfn","url":"https://w3c.github.io/encrypted-media/#dfn-cdm"},
 "https://w3c.github.io/webappsec-credential-management/#credential-manager": {"displayText":"credential manager","export":true,"for_":[],"level":"1","normative":true,"shortname":"credential-management","spec":"credential-management-1","status":"current","text":"credential manager","type":"dfn","url":"https://w3c.github.io/webappsec-credential-management/#credential-manager"},
 };
 
