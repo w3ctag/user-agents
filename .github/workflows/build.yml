@@ -16,7 +16,6 @@ jobs:
           BUILD_FAIL_ON: warning
           GH_PAGES_BRANCH: gh-pages
           W3C_BUILD_OVERRIDE: |
-            status: NOTE-WD
-            TR: https://www.w3.org/TR/web-user-agents/
+            status: NOTE
           W3C_ECHIDNA_TOKEN: ${{ secrets.ECHIDNA_TOKEN }}
-          W3C_WG_DECISION_URL: https://github.com/w3ctag/meetings/blob/gh-pages/2025/09-Hong-Kong/09-17-minutes.md#agreement-to-publish-it-as-a-draft-note-and-echidna-it
+          W3C_WG_DECISION_URL: https://github.com/w3ctag/meetings/blob/gh-pages/2026/telcons/10-19-minutes.md#user-agents73-user-agents---jyasskin-csarven
